@@ -1,0 +1,7 @@
+:root{
+    --color-background: rgba(195, 202, 217, 1);
+}
+
+.cuerpo{
+    background-color: green;
+}
