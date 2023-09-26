@@ -2,12 +2,12 @@ export const products = [
     {
         id:1,
         categoria: 'Laptops',
-        nombre: 'Apple Mac Book Pro',
+        nombre: 'MacBook Air 1',
         marca: 'Apple',
-        precio: 950,
+        precio: 999,
         descipcion: 'asdadadasadadadasdadasdasdasdasd',
-        coloresDisponibles: ['black', 'orange', 'gray'],
-        img: " ",
+        coloresDisponibles: ['Negro', 'Dorado', 'Gris'],
+        img: "/public/imagenes/MacBook Air 1.png",
         memoria: 4
     },
     {
@@ -37,4 +37,24 @@ export const products = [
         descipcion: 'asdadadasadadadasdadasdasdasdasd',
         coloresDisponibles: ['black', 'white']
     },
+    {
+        id:5,
+        categoria: 'Celulares',
+        nombre: 'iPhone 15 Pro',
+        marca: 'Apple',
+        precio: 1299,
+        descipcion: 'asdadadasadadadasdadasdasdasdasd',
+        coloresDisponibles: ['black', 'white']
+    },
+    {
+    id:6,
+    categoria: 'Celulares',
+    nombre: 'iPhone 15 Pro',
+    marca: 'Apple',
+    precio: 1299,
+    descipcion: 'asdadadasadadadasdadasdasdasdasd',
+    coloresDisponibles: ['black', 'white']
+    },
+
+
 ]
