@@ -1,27 +1,30 @@
 import React from 'react'
-/* import { products } from '../productsDB' */
 import { Link } from 'react-router-dom'
+import {BiSolidDownArrow} from 'react-icons/Bi'
 import { useFilterContext } from '../context/FilterContextProvider'
 import { Filtradores } from '../components'
 
 
 const Home = () => {
-const {ListaProductos,SearchString, handleFilterProducto} = useFilterContext()
+const {ListaProductos,SearchString, handleClaseOculta} = useFilterContext()
   return (
     <div className='componentesDelHome' >
         <div className='productosDelHome'>
-              <h1>Bienvenido a TechStore</h1>
+              <div className='separadorHome'>
+                  <h1>Bienvenido a TechStore</h1> 
+                  <h3 id='toggleFiltradores' onClick={handleClaseOculta}>Desplegar Filtradores <BiSolidDownArrow  onClick={handleClaseOculta} style={{ color: 'darkblue', fontSize: '1.4rem' }}/></h3>
+              </div>
               <br/>
-              <div >
+              <div className='padreTarjetas'>
                   { 
-                      ListaProductos.filter(products => products.nombre.toLocaleLowerCase().includes(SearchString.toLocaleLowerCase())).map(({categoria, nombre, id, precio, img, memoria}) => (
-                          <Card categoria={categoria} nombre={nombre} id={id} precio ={precio} img={img} memoria={memoria} key={id}/>
+                      ListaProductos.filter(products => products.nombre.toLocaleLowerCase().includes(SearchString.toLocaleLowerCase())).map(({categoria, nombre, id, precio, img, memoria, marca, descripcion, coloresDisponibles}) => (
+                          <Card categoria={categoria} nombre={nombre} id={id} precio ={precio} img={img} memoria={memoria} marca={marca} descripcion={descripcion} coloresDisponibles={coloresDisponibles} key={id}/>
                       ))
                   }
               </div>
           </div>
 
-      <div>
+      <div className='sidebar'>
       <Filtradores/>
         </div>
     </div>
@@ -34,14 +37,15 @@ const Card = ({categoria, nombre, precio, id, img, memoria}) => {
   return (
     <div className='tarjetasProducto'>
       
+        <div className='contenedorImagenCards'>
+            <img src={img} className='imagenCards'></img>
+        </div>
         <h2>{nombre}</h2>
-        <img src={img} className='imagenCards'></img>
-        <h3>{categoria}</h3>
+        <h3>Categoria: {categoria}</h3>
+        
         <span>${precio}</span>
-        <br/>
-        <span>{memoria}GB</span>
-        <br/>
-        <Link to={'/detail/' + id}>Ver detalle</Link>
+      {/*   <span>{memoria}GB</span> */}
+        <Link className='tarjetasVerDetalle' to={'/detail/' + id}>Ver detalle</Link>
       </div>
   )
 }

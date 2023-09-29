@@ -20,6 +20,11 @@ const [CategoriasSeleccionada, setCategoriasSeleccionada] = useState([])
 
 const [PrecioSeleccionado, setPrecioSeleccionado] = useState(false)
 
+const [PriceRangeMin, setPriceRangeMin] = useState(0);
+
+const [PriceRangeMax, setPriceRangeMax] = useState(2500);
+
+const[ClaseOculta, setClaseOculta] = useState(false)
 
 
 
@@ -50,16 +55,22 @@ useEffect(()=>{
   }
   if(MarcasSeleccionadas.length !== 0){
     productosFiltrados = productosFiltrados.filter(producto => MarcasSeleccionadas.includes(producto.marca));
-}
-  if (PrecioSeleccionado ){
-      productosFiltrados = productosFiltrados.filter(producto => producto.precio >= 851);
   }
+  if(PriceRangeMin !==0){
+    productosFiltrados = productosFiltrados.filter(producto => producto.precio >= PriceRangeMin)
+  }
+  if(PriceRangeMax !==2500){
+    productosFiltrados = productosFiltrados.filter(producto => producto.precio <= PriceRangeMax)
+  }
+ /*  if(SearchString.length !==0 && SearchString!=='' && SearchString!==undefined){
+    console.log('esta funcionando')
+    productosFiltrados = productosFiltrados.filter(producto => producto.nombre.toLocaleLowerCase().includes(SearchString.toLocaleLowerCase()))
+  } */
   setListaProductos(productosFiltrados)
 
-}, [PrecioSeleccionado, CategoriasSeleccionada, MarcasSeleccionadas]
+}, [CategoriasSeleccionada, MarcasSeleccionadas, PriceRangeMin, PriceRangeMax]
 )
 
-console.log(CategoriasSeleccionada)
 const handleCheckCategoriaSeleccionada = (evento, checked) => {
     if(checked){
       setCategoriasSeleccionada([...CategoriasSeleccionada, evento])
@@ -69,7 +80,6 @@ const handleCheckCategoriaSeleccionada = (evento, checked) => {
   }
 
 
-console.log(MarcasSeleccionadas)  
 const handleCheckMarcaSeleccionada = (evento, checked) => {
 
     if(checked){
@@ -79,55 +89,18 @@ const handleCheckMarcaSeleccionada = (evento, checked) => {
     }
   }
 
-
-
-/*   if(CategoriasSeleccionada.includes(value)){
-    setCategoriasSeleccionada(CategoriasSeleccionada.filter(categoria => categoria !== value))
-  }
-  else{
-    setCategoriasSeleccionada([...CategoriasSeleccionada, value])
-  } */
-
-
-
-  /*   if(CategoriasSeleccionada.find(producto => producto.categoria === categoria)){
-      setCategoriasSeleccionada(CategoriasSeleccionada.filter(producto => producto.categoria !==categoria))
-
-    } else{
-      const CategoriaSeleccionada = products.find(producto => producto.categoria === categoria)
-      setCategoriasSeleccionada([...CategoriasSeleccionada, CategoriaSeleccionada]) */
-    
-
-   /*  useEffect(()=>{
-      const newListaProductos = !CategoriasSeleccionada./* includes(producto.categoria) */
-    /*   setListaProductos(newListaProductos)
-    }, [CategoriasSeleccionada]) */
+const handlePriceChangeMin = (event) => { 
+  setPriceRangeMin(event.target.value);
+  };
+  
+const handlePriceChangeMax = (event) => { 
+    setPriceRangeMax(event.target.value);
+    };
  
-/* 
-useEffect(()=>{
-  if (CategoriasSeleccionada){
-      setListaProductos(ListaProductos.filter(producto => producto.categoria = CategoriaSeleccionada))
-  }
-  else{
-      setListaProductos(products) //esta mal usar otra vez listaproductos?
-  }
-}, [CategoriasSeleccionada]
-) */
-
-
-const MarcasUnicas = [...new Set(products.map(producto => producto.marca))]
-
-const handleSelectMarca = (marca) => {
-
-  if(MarcasSeleccionadas.find(producto => producto.marca === marca)){
-    setMarcasSeleccionadas(MarcasSeleccionadas.filter(producto => producto.marca !== marca))
-  } else{
-    const MarcaSeleccionada = products.find(producto => producto.marca === marca)
-    setMarcasSeleccionadas([...MarcasSeleccionadas, MarcaSeleccionada])
-  }
-
-
+const handleClaseOculta = ()=> {
+  setClaseOculta(!ClaseOculta);
 }
+
 
 
   return (
@@ -139,12 +112,16 @@ const handleSelectMarca = (marca) => {
       handleSelectProduct,
       MarcasSeleccionadas,
       CategoriasSeleccionada,
-      handleSelectMarca,
-      MarcasUnicas,
       PrecioSeleccionado,
       handleCheckPrecioSeleccionado,
       handleCheckCategoriaSeleccionada,
-      handleCheckMarcaSeleccionada
+      handleCheckMarcaSeleccionada,
+      PriceRangeMin,
+      PriceRangeMax,
+      handlePriceChangeMin,
+      handlePriceChangeMax,
+      handleClaseOculta,
+      ClaseOculta
       }}>
       {children}
     </FilterContext.Provider>

@@ -6,12 +6,12 @@ import '../styles/CartStyles.css'
 const Cart = () => {
   const {cart, getTotalCart} = useGlobalContext()
   return (
-    <div>
+    <div className='paginaCarrito'>
       {
         cart.length > 0
         ?
-        cart.map(({categoria, nombre, id, precio, quantity}) => (
-          <CartItem categoria={categoria} nombre={nombre} id={id} precio ={precio} key={id} quantity={quantity}/>
+        cart.map(({categoria, nombre, id, precio, quantity, img}) => (
+          <CartItem categoria={categoria} nombre={nombre} id={id} precio ={precio} key={id} quantity={quantity} img={img}/>
           ))
         :
         <h2>Tu carrito aún está vacio</h2>
@@ -23,14 +23,15 @@ const Cart = () => {
 
 export default Cart
 
-const CartItem = ({categoria, nombre, precio, id, quantity}) => {
+const CartItem = ({categoria, nombre, precio, id, quantity, img}) => {
   return (
-    <div>
+    <div >
+        <img src={img} width='350px' className='imagenCards'></img>
         <h3>{categoria}</h3>
         <h2>{nombre}</h2>
         <span>${precio}</span>
         <br/>
-        <span>Cantidad comprada: {quantity} </span>
+        <span>Cantidad seleccionada: {quantity} </span>
         <Link to={'/detail/' + id}>Ver detalle</Link>
     </div>
   )

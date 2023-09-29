@@ -9,17 +9,18 @@ const ProductCartButton = ({id}) => {
         {
             isInCart(id)
             ?
-            <div>
-                <button onClick={() => handleDeleteProduct(id)}>
+            <div className='botonesCarrito'>
+                <button className='btnCompra' onClick={() => handleDeleteProduct(id)}>
                     -
                 </button>
-                {findProductCart(id).quantity}
-                <button onClick={() => handleAddProduct (id)}>
+             {/*    {findProductCart(id).quantity} */}
+                <span className='cantidadEnCarrito'>{findProductCart(id).quantity}</span>
+                <button className='btnCompra' onClick={() => handleAddProduct (id)}>
                     +
                 </button>
             </div>
             :
-            <button onClick={() => handleAddProduct(id)}> Añadir al carrito </button>
+            <button className='btnCompraPrevio'  onClick={() => handleAddProduct(id)}> Añadir al carrito </button>
         }
 
     </>

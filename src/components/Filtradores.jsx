@@ -1,33 +1,65 @@
 import React from 'react'
+import {BiSolidDownArrow} from 'react-icons/Bi'
 import { useFilterContext } from '../context/FilterContextProvider'
 
 const Filtradores = () => {
-    const {PrecioSeleccionado, handleCheckPrecioSeleccionado, CategoriasSeleccionada,handleCheckCategoriaSeleccionada, handleCheckMarcaSeleccionada, searchString } = useFilterContext()
+    const {
+      handleCheckCategoriaSeleccionada,
+      handleCheckMarcaSeleccionada,
+      PriceRangeMin,
+      PriceRangeMax,
+      handlePriceChangeMin,
+      handlePriceChangeMax,
+      handleClaseOculta,
+      ClaseOculta} = useFilterContext()
 
 
 
   return (
-    <div>
-        <div className='filters'>
+    <div className='contenedorFiltros'>
 
-        <label htmlFor="">Filtrar por precio mayor a $500: </label>
-        <input type="checkbox" checked={PrecioSeleccionado} onChange={handleCheckPrecioSeleccionado} /> 
-        <br/>
-        <label htmlFor="">Filtrar por categoria: Laptop </label>
-        <input type="checkbox" value= {'Laptops'} onChange={(e) => handleCheckCategoriaSeleccionada(e.target.value, e.target.checked)} /> 
-        <br/>
-        <label htmlFor="">Filtrar por categoria: Celulares </label>
-        <input type="checkbox" value= {'Celulares'} onChange={(e) => handleCheckCategoriaSeleccionada(e.target.value, e.target.checked)} /> 
+            <div className={`filters ${ClaseOculta ? 'ClaseShow' : 'claseHide'}`} >
+                <span>Filtrar por Categoria: </span>
+                <br/>
+                <label htmlFor="">Laptops </label>
+                <input type="checkbox" value= {'Laptops'} onChange={(e) => handleCheckCategoriaSeleccionada(e.target.value, e.target.checked)} /> 
+                <br/>
+                <label htmlFor="">Celulares </label>
+                <input type="checkbox" value= {'Celulares'} onChange={(e) => handleCheckCategoriaSeleccionada(e.target.value, e.target.checked)} /> 
+                <br/>
+                <label htmlFor="">Televisores </label>
+                <input type="checkbox" value= {'Televisores'} onChange={(e) => handleCheckCategoriaSeleccionada(e.target.value, e.target.checked)} /> 
+                <br/>
+                <label htmlFor="">Smartwatches </label>
+                <input type="checkbox" value= {'Smartwatches'} onChange={(e) => handleCheckCategoriaSeleccionada(e.target.value, e.target.checked)} /> 
+            </div>
+        
 
-
-
-        <br/>
-        <label htmlFor="">Filtrar por Marca: Apple </label>
-        <input type="checkbox" value= {'Apple'} onChange={(e) => handleCheckMarcaSeleccionada(e.target.value, e.target.checked)} /> 
+        <div className={`filters ${ClaseOculta ? 'claseShow' : 'claseHide'}`}>
+            <span>Filtrar por Marca: </span>
+            <br/>
+            <label htmlFor="">Filtrar por Marca: Apple </label>
+            <input type="checkbox" value= {'Apple'} onChange={(e) => handleCheckMarcaSeleccionada(e.target.value, e.target.checked)} /> 
+            <br/>
+            <label htmlFor="">Filtrar por Marca: Samsung </label>
+            <input type="checkbox" value= {'Samsung'} onChange={(e) => handleCheckMarcaSeleccionada(e.target.value, e.target.checked)} /> 
+            <br/>
+            <label htmlFor="">Filtrar por Marca: Google </label>
+            <input type="checkbox" value= {'Google'} onChange={(e) => handleCheckMarcaSeleccionada(e.target.value, e.target.checked)} />
         </div>
-        <div>
+
+        <div className={`filters ${ClaseOculta ? 'claseShow' : 'claseHide'}`}>
+            <span>Filtrar por Precio: </span>
+            <br/>
+            <br/>
+            <label htmlFor=''>Máximo $: {PriceRangeMax} </label> <br/>
+            <input className='barrita' type="range" min='0' max='2500' step='20' value={PriceRangeMax} onChange={handlePriceChangeMax} />
+            <br/>
+            <label htmlFor=''>Minimo $: {PriceRangeMin} </label><br/>
+            <input className='barrita'type="range" min='0' max='2500' step='20' value={PriceRangeMin} onChange={handlePriceChangeMin} />
 
         </div>
+        
     </div>
   )
 }

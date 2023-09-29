@@ -7,7 +7,7 @@ import { useFilterContext } from '../context/FilterContextProvider'
 import NavBar from './NavBar'
 
 const Header = () => {
-  const {searchString, handleFilterProducto} = useFilterContext
+  const {searchString, handleFilterProducto} = useFilterContext()
   const {getTotalProductsInCart} = useGlobalContext()
   return (
     <header>
@@ -15,7 +15,7 @@ const Header = () => {
     {/*   <a href="/public/mediaaaa/Logo.png"></a>  */}
       <h2 id='NombreMarca'> TechStore </h2>
       <input placeholder='Buscá tu producto' value={searchString}  onChange={handleFilterProducto} />
-      <NavLink id='NavCatalogo'to={'/home'}>Ir al catalogo</NavLink>
+      <NavLink id='NavCatalogo'to={'/home'}>Ir al Catalogo</NavLink>
       <NavLink id='NavContacto'to={'/contact'}>Ir a Contacto </NavLink>
       <NavLink id='NavCarrito' to={'/cart'}> 
           {<IoCartOutline/>}

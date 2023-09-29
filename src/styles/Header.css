@@ -6,16 +6,14 @@
 }
 
 :root{
-    --color-background: rgba(195, 202, 217, 1);
+    /* --color-background: rgba(195, 202, 217, 1); */
+    --color-background: rgb(197, 201, 208);
+    --color-primario: rgb(20, 58, 134);
 }
 
-/* .cuerpo{
-    display: flex;
-    flex-direction: row;
-}
- */
 #root{
-
+    background-color: rgba(237, 239, 242, 1);
+    width: 100vw;
 }
 
 Header{
@@ -24,32 +22,42 @@ Header{
     justify-content: space-between;
     align-items: center;
     width: 100vw;
-    height: 70px;
-   /*  padding: 5px 10px; */
+    height: 64px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    border-bottom: 1px solid rgb(169, 169, 169);
+
 
 }
 Header h2{
     font-size: 3rem;
+    color: var(--color-primario);
 }
 Header input{
-    border-radius: 4px;
+    border-radius: 8px;
     border: 1px solid gray;
-    width: 40em;
-    height: 30px;
+    width: 30%;
+    height: 33px;
     padding: 3px;
 }
 
 #NavCatalogo{
     text-decoration: none;
     font-size: 1.3rem;
+    font-weight: 550;
+    color: var(--color-primario);
 } 
 #NavContacto{
     text-decoration: none;
     font-size: 1.3rem;
+    font-weight: 550;
+    color: var(--color-primario);
 }
 #NavCarrito{
     font-size: 2rem;
-    color: red;
+    font-weight: 300;
+    color: var(--color-primario);
     padding-right: 5px;
 }
 .IoCartOutline{
@@ -57,30 +65,87 @@ Header input{
     color: red;
 }
 
+/* ---------carrito------- */
+.paginaCarrito{
+    background-color: aquamarine;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 
 
-
-
-
-
+/* --------formulario-------- */
+.contendedorFormulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+    width: 50%;
+    border: 1px solid rgb(148, 147, 147);
+    border-radius: 14px;
+    margin: auto;
+    margin-top: 2%;
+    padding: 1% ;
+    box-shadow: 1px 1px 2px 2px lightgrey;
+    background-color: var(--color-background);  
+}
 
 .formulario{
     display: flex;
     flex-direction: column;
-    max-width: 500px;
+    align-items: start;
+    justify-content: center;
+    max-width: 600px;
+    width: 95%;
+    margin: auto;
+    margin-top: 2%;
+    padding-left: 5% ;
+    font-size: 1.05rem;
 }
 .formulario input{
     border-radius: 4px;
     border: 1px solid gray;
-    width: 15em;
+    width: 90%;
+    min-width: 200px;
+}
+.formulario label{
+    width: 100%;
+    font-weight: bold;
 }
 .formulario input:hover{
     cursor: pointer;
 }
 
+.formulario h2{
+    color: var(--color-primario);
+
+}
+
+.checkboxDerecha{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    align-items: center;
+}
+
+.checkboxDerecha label{
+    width: 95%;
+}
+
+.checkboxDerecha input{
+    width: 20%;
+    min-width: 80px;
+    height: 30px;
+    position: relative;
+    left: 25px;
+}
+
 #message{
-    width: 30em;
-    height: 9em;
+    width: 90%;
+    min-width: 200px;
+    height: 120px;
     border-radius: 4px;
     border: 1px solid gray;
 }
@@ -89,11 +154,22 @@ Header input{
 }
 
 #formSubmit{
-    width: 5em;
+    font-size: 1.1rem;
+    width: 130px;
+    min-width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 1px 1px 1px 1px lightgrey;
+    margin: auto;
+
 }
 #formSubmit:hover{
-    transform: scale(1.1);
+    transform: scale(1.03);
     transition: 0.275s ease;
+    box-shadow: 2px 2px 1px 2px lightgrey;
+    background-color: var(--color-primario);
+    color: white;
 }
 
 
@@ -110,35 +186,274 @@ Header input{
 }
 
 .productosDelHome{
-    width: 75%;
-/*     display: flex;
-    flex-direction: row; */
+    width:75%;
+}
+.separadorHome{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    color:  var(--color-primario);
+}
+.separadorHome h1{
+    font-size: 2.4rem;
+}
+
+.separadorHome h3:hover{
+    cursor: pointer;
+}
+
+
+.sidebar{
+    width: 24.5%;
+    height: 700px;
+    margin-top: 10%;
 }
 
 
 
 
-
 /* filters */
+#toggleFiltradores{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.BiSolidDownArrow{
+    color: lawngreen;
+    background-color: aqua;
+    font-size: 89px;
+}
+
+.contenedorFiltros{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+
+.filters{
+    height: auto;
+    border: 1px solid rgb(130, 130, 130);
+    border-radius: 10px;
+    font-size: 1.6rem;
+    font-weight: 550;
+    color: var(--color-primario);
+    background-color: var(--color-background);
+    padding: 1.5%;
+    box-shadow: 1px 1px 2px 2px lightgray;
+}
+.filters .barrita{
+    background-color: var(--color-primario);
+}
+
 
 .filters input:hover{
     cursor: pointer;
 }
 
 
-.imagenCards{
-    width: 100px;
+
+.padreTarjetas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
 }
 
 
-/* productos */
+
 .tarjetasProducto{
     display: flex;
+    align-items: center;
     flex-direction: column;
-    flex-wrap: wrap;
-    background-color: aqua;
+    justify-content: center;
     border: 1px solid gray;
-    border-radius: 5px;
-    height: 250px;
-    width: 210px;
+    background-color: white;
+    border-radius: 18px;
+    box-shadow: 3px 3px 2px 1px lightgray;
+    height: 320px;
+    width: 300px;
+    padding: 2%;
+    color: var(--color-primario);
+    font-size: 1.2rem;
+    gap: 10px;
 }
+
+.tarjetasProducto:hover{
+    transform: scale(1.02);
+    transition: 0.475s ease;
+    box-shadow: 4px 4px 3px 2px lightgray;
+}
+
+.tarjetasProducto .contenedorImagenCards{
+    width: 180px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+}
+
+.tarjetasProducto img{
+    width: 180px;
+}
+.tarjetasProducto h2{
+    font-size: 1.2rem;
+}
+.tarjetasProducto h3{
+    font-size: 0.9rem;
+}
+
+.tarjetasProducto .tarjetasVerDetalle{
+    text-decoration: none;
+    color: var(--color-primario);
+}
+/* -----------detaill Productos--------- */
+
+
+.detailProductsCompleto{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border: solid 1px gray;
+    border-radius: 3%;
+    width: 80%;
+    margin: auto;
+    margin-top: 6%;
+    box-shadow: 3px 3px 2px 1px lightgray;
+    background-color: white;
+    padding: 0 2%;
+ /*    padding: 0% 1.5%; */
+}
+
+.detailProductsCompleto:hover{
+    transform: scale(1.02);
+    transition: 0.475s ease;
+    box-shadow: 4px 4px 3px 2px lightgray;
+}
+.detailProdImagen{
+    border-radius: 3%;
+    padding: 2% 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.detailProdH2{
+    font-size: 2.7rem;
+  /*   color:rgb(56, 74, 110); */
+    color: var(--color-primario);
+}
+
+.contenedorFoto{
+    height: 28.5rem;
+    width: 28.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    border: 1px solid lightgray;
+    box-shadow: 1px 1px 1px 1px lightgrey;
+    padding: 5px;
+}
+
+.detailProdH3{
+    font-size: 1.8rem;
+    color:rgb(56, 74, 110);
+}
+
+/* .detailProdImagen{
+
+} */
+.detailProdResto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 40px;
+    height: 28.5rem;
+    width: 28.5rem;
+    padding: 2% 0%;
+}
+
+.detailProdResto p{
+    font-size: 1.8rem;
+    width: inherit;
+    color: var(--color-primario);
+    font-weight: 550;
+}
+.detailProdResto span{
+    font-size: 1.8rem;
+    width: inherit;
+    color: var(--color-primario);
+    font-weight: 550;}
+
+.botonesCarrito{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.btnCompra{
+    width: 4rem;
+    height: 2rem;
+    font-size: 2rem;
+    text-align: center;
+    border-radius: 0.9rem;
+    border: transparent ;
+    box-shadow: 1px 1px 1px 1px lightgray;
+}
+
+.btnCompra:hover{
+    cursor: pointer;
+    transform: scale(1.02);
+    transition: 0.475s ease;
+    box-shadow: 2px 2px 1px 2px lightgray;
+
+}
+
+
+
+.btnCompraPrevio{
+    width: 13rem;
+    height: 3rem;
+    border-radius: 10px;
+    font-size: 1.6rem;
+    border-radius: 0.9rem;
+    border: transparent ;
+    box-shadow: 1px 1px 1px 1px lightgray;
+    color: var(--color-primario);
+    font-weight: 500;
+}
+
+.btnCompraPrevio:hover{
+    cursor: pointer;
+    transform: scale(1.02);
+    transition: 0.475s ease;
+    box-shadow: 2px 2px 1px 2px lightgray;
+
+}
+
+
+
+/* -----------clase especial --------- */
+.claseHide{
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.475s ease, visibility 0s 0.375s;
+}
+.claseShow{
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.475s ease, visibility 0s;
+}
+
+
+
+

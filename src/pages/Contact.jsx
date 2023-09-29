@@ -2,32 +2,36 @@ import React from 'react'
 
 const Contact = () => {
   return (
+    <div className='contendedorFormulario'>
     <div className='formulario'>
 
-      <h2>Para dudas y consultas llene el formulario y nos estaremos comunicando</h2>
-      <label for='nombre'>Escriba su nombre completo</label>
+      <h2>Por dudas y consultas llene el formulario y nos estaremos comunicando con usted.</h2>
+      <br/>
+      <label htmlFor='nombre'>Nombre completo: </label>
       <input type="text" id='nombre' name='nombre' required /> <br/>
 
-      <label for='fechaNacimiento'>Coloque su fecha de nacimiento</label>
+      <label htmlFor='fechaNacimiento'>Fecha de nacimiento: </label>
       <input type="date" id='fechaNacimiento' name='fechaNacimiento' required /> <br/>
 
-      <label for='telefono'>Escriba su numero telefónico</label>
+      <label htmlFor='telefono'>Numero telefónico: </label>
       <input type="tel" id='telefono' name='telefono' /> <br/>
 
-      <label for='email'>Escriba su correo electrónico</label>
+      <label htmlFor='email'>Correo electrónico: </label>
       <input type="email" id='email' name='email' required /> <br/>
 
-      <label for="message">Si tiene alguna pregunta o comentario puede escribirlo aquí:</label> <br/>
+      <label htmlFor="message">Si tiene preguntas o comentarios puede <br/> escribirlo aquí:</label>
       <textarea id="message" name="message" rows="4" cols="50" required></textarea><br/>
 
 
-
-      <label for='terminosCondiciones'> ¿Acepta nuestros terminos y condiciones?</label>
-      <input type="checkbox" id='terminosCondiciones' name='terminosCondiciones' required /><br/>
+      <div  className='checkboxDerecha'>
+      <label htmlFor='terminosCondiciones' className='terminosCondiciones'> ¿Acepta nuestros terminos y condiciones?</label>
+      <input type="checkbox" name='terminosCondiciones' required /><br/>
       {/* <a href="/Terminos-y-Condiciones" target='_blank'></a VER LUEGO> */}
-
+      </div>
+      <br/>
       <input type="submit" value='Enviar' id='formSubmit' />
 
+    </div>
     </div>
     
   )

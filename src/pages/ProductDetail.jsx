@@ -13,15 +13,23 @@ const ProductDetail = () => {
 
     
     return (
-    <div>
+    <div className='detailProductsCompleto'>
         {
         productFound ?
         <>
-            <h2>{productFound.nombre}</h2>
-           {/*  <img src= {require(productFound.img)}/> */}
-            <span>Precio $: {productFound.precio}</span>
-            <ProductCartButton id={productFound.id}/>
-            <span> {productFound.memoria} </span>
+            <div className='detailProdImagen'>
+                <h2 className='detailProdH2'>{productFound.nombre}</h2>
+                <div className='contenedorFoto'>
+                    <img src= {productFound.img} width='100%' minwidth='200px' alt='foto del producto'/>
+                </div>
+            </div>
+            <div className='detailProdResto'>
+                <p>{productFound.descipcion}</p>
+                <p>Colores Disponibles: {productFound.coloresDisponibles.join(', ')}</p>
+                <span>Precio: $ {productFound.precio}</span>
+                <ProductCartButton id={productFound.id}/>
+                {/* <span> {productFound.memoria} </span> */}
+            </div>
         </>
         :
         <Error404 mensaje={'Producto no encontrado'}/>
