@@ -19,7 +19,8 @@
 Header{
     background-color: var(--color-background);
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-around;
     align-items: center;
     width: 100vw;
     height: 64px;
@@ -28,10 +29,21 @@ Header{
     z-index: 2;
     border-bottom: 1px solid rgb(169, 169, 169);
 
-
 }
+
+#logoTech{
+    width: 40px;
+    height: 40px;
+}
+
+#NombreMarca{
+    display: flex;
+    align-items: center;
+    font-size: 2.5rem;
+}
+
+
 Header h2{
-    font-size: 3rem;
     color: var(--color-primario);
 }
 Header input{
@@ -48,6 +60,11 @@ Header input{
     font-weight: 550;
     color: var(--color-primario);
 } 
+.AiFillHome{
+    font-size: 2.2rem;
+    color: rebeccapurple;
+    background-color: aqua;
+}
 #NavContacto{
     text-decoration: none;
     font-size: 1.3rem;
@@ -55,23 +72,105 @@ Header input{
     color: var(--color-primario);
 }
 #NavCarrito{
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 300;
     color: var(--color-primario);
     padding-right: 5px;
 }
 .IoCartOutline{
-    width: 2rem;
+    width: 2.2rem;
     color: red;
 }
 
-/* ---------carrito------- */
+/* -------------carrito------------- */
+.contenedorPaginaCarrito{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
+    height: 100%;
+    background-color: pink;
+}
+
+.contenedorPaginaCarrito .totalCart{
+    height: 40px;
+    font-size: 1.7rem;
+}
 .paginaCarrito{
-    background-color: aquamarine;
     width: 100vw;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 1.5%;
+}
+.btnComprarFinal{
+    width: 13rem;
+    height: 3rem;
+    border-radius: 10px;
+    font-size: 1.6rem;
+    border-radius: 0.9rem;
+    border: transparent ;
+    box-shadow: 1px 1px 1px 1px lightgray;
+    color: var(--color-primario);
+    font-weight: 500;
+    font-weight: 550;
+}
+
+.btnComprarFinal:hover{
+    cursor: pointer;
+    transform: scale(1.02);
+    transition: 0.475s ease;
+    box-shadow: 2px 2px 1px 2px lightgray;
+
+}
+.tarjetasCarrito{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid gray;
+    background-color: white;
+    border-radius: 18px;
+    box-shadow: 3px 3px 2px 1px lightgray;
+    width: 320px;
+    padding: 2%;
+    color: var(--color-primario);
+    font-size: 1.2rem;
+    gap: 10px;
+}
+.tarjetasCarrito:hover{
+    transform: scale(1.02);
+    transition: 0.475s ease;
+    box-shadow: 4px 4px 3px 2px lightgray;
+}
+
+.tarjetasCarritoo .contenedorImagenCards{
+    width: 180px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+}
+
+
+.tarjetasCarrito img{
+    width: 110px;
+}
+.tarjetasCarrito h2{
+    font-size: 1.2rem;
+}
+.tarjetasCarrito h3{
+    font-size: 0.9rem;
+}
+.tarjetasCarrito .spanPrecio{
+    font-weight: 550;
+}
+
+.tarjetasCarrito .tarjetasVerDetalle{
+    text-decoration: none;
+    color: var(--color-primario);
 }
 
 
@@ -174,9 +273,7 @@ Header input{
 
 
 
-
-
-
+/* ------------------Home----------------- */
 
 
 .componentesDelHome{
@@ -186,8 +283,11 @@ Header input{
 }
 
 .productosDelHome{
-    width:75%;
-}
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+/*     width:75%;
+ */}
 .separadorHome{
     display: flex;
     flex-direction: row;
@@ -213,7 +313,7 @@ Header input{
 
 
 
-/* filters */
+/*-------------- filters ------------- */
 #toggleFiltradores{
     display: flex;
     flex-direction: row;
@@ -247,6 +347,7 @@ Header input{
 }
 .filters .barrita{
     background-color: var(--color-primario);
+    width: 95%;
 }
 
 
@@ -254,7 +355,7 @@ Header input{
     cursor: pointer;
 }
 
-
+/* ---------------------------------- */
 
 .padreTarjetas{
     display: flex;
@@ -262,9 +363,9 @@ Header input{
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    width: 75%;
 
 }
-
 
 
 .tarjetasProducto{
@@ -313,28 +414,55 @@ Header input{
 }
 /* -----------detaill Productos--------- */
 
-
-.detailProductsCompleto{
+.contenedorProductDetail{
+    height: 100%;
+    min-height: 100vh;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
-    border: solid 1px gray;
-    border-radius: 3%;
-    width: 80%;
-    margin: auto;
-    margin-top: 6%;
-    box-shadow: 3px 3px 2px 1px lightgray;
-    background-color: white;
-    padding: 0 2%;
- /*    padding: 0% 1.5%; */
+    justify-content: center;
 }
 
-.detailProductsCompleto:hover{
+.contenedorDeContenedores{
+    display: flex;
+    border: 1px solid gold;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3%;
+    width: 80%;
+    height: 400px;
+}
+.contenedorDivs{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    border: 1px solid lightgray;
+    background-color: white;
+    border-radius: 5%;
+    margin: auto;
+    box-shadow: 3px 3px 2px 1px lightgray;
+    padding: 1.5%;
+
+}
+.divNombreProductos{
+    display: flex;
+    padding: 0 2%;
+}
+.contenedorDivs:hover{
     transform: scale(1.02);
     transition: 0.475s ease;
     box-shadow: 4px 4px 3px 2px lightgray;
 }
+.detailProductsCompleto{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 34px;
+    align-items: center;
+    background-color: white;
+}
+
+
 .detailProdImagen{
     border-radius: 3%;
     padding: 2% 0%;
@@ -345,14 +473,13 @@ Header input{
 }
 
 .detailProdH2{
-    font-size: 2.7rem;
-  /*   color:rgb(56, 74, 110); */
+    font-size: 1.6rem;
     color: var(--color-primario);
 }
 
 .contenedorFoto{
-    height: 28.5rem;
-    width: 28.5rem;
+    height: 14rem;
+    width: 14rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -367,28 +494,25 @@ Header input{
     color:rgb(56, 74, 110);
 }
 
-/* .detailProdImagen{
-
-} */
 .detailProdResto{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    gap: 40px;
-    height: 28.5rem;
-    width: 28.5rem;
+    gap: 20px;
+    height: 16rem;
+    width: 16rem;
     padding: 2% 0%;
 }
 
 .detailProdResto p{
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     width: inherit;
     color: var(--color-primario);
     font-weight: 550;
 }
 .detailProdResto span{
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     width: inherit;
     color: var(--color-primario);
     font-weight: 550;}
@@ -402,12 +526,16 @@ Header input{
 
 .btnCompra{
     width: 4rem;
-    height: 2rem;
+    height: 1.9rem;
     font-size: 2rem;
     text-align: center;
     border-radius: 0.9rem;
     border: transparent ;
     box-shadow: 1px 1px 1px 1px lightgray;
+    color: var(--color-primario);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .btnCompra:hover{
@@ -415,21 +543,25 @@ Header input{
     transform: scale(1.02);
     transition: 0.475s ease;
     box-shadow: 2px 2px 1px 2px lightgray;
+    background-color: var(--color-primario);
+    color: white;
+
 
 }
 
 
 
 .btnCompraPrevio{
-    width: 13rem;
-    height: 3rem;
-    border-radius: 10px;
-    font-size: 1.6rem;
+    width: 12rem;
+    height: 2.2rem;
+    border-radius: 0.9rem;
+    font-size: 1.3rem;
     border-radius: 0.9rem;
     border: transparent ;
     box-shadow: 1px 1px 1px 1px lightgray;
     color: var(--color-primario);
     font-weight: 500;
+    font-weight: bold;
 }
 
 .btnCompraPrevio:hover{
@@ -437,7 +569,69 @@ Header input{
     transform: scale(1.02);
     transition: 0.475s ease;
     box-shadow: 2px 2px 1px 2px lightgray;
+    background-color: var(--color-primario);
+    color: white;
 
+}
+
+
+.divDescripcionProducto{
+    background-color: paleturquoise;
+    display: flex;
+    width: 80%;
+}
+/* ------------footer---------- */
+
+footer{
+    height: 100%;
+    min-height: 100px;
+    color: var(--color-primario);
+    background-color: var(--color-background);
+    padding: 5px 10px;
+    font-size: 0.8rem;
+}
+
+
+footer .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.tituloInfos{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+footer .linksFooter{
+    display: flex;
+    flex-direction: column;
+    
+}
+footer .linksFooter ul{
+list-style-type: none;
+}
+footer .linksFooter ul a{
+    text-decoration: none;
+    
+    
+}
+.linksFooter a{
+    color: var(--color-primario);
+}
+
+footer .redesSociales{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+footer .redesSociales a{
+    text-decoration: none;
+    color: var(--color-primario);
+}
+
+.FinalDelFooter{
+    font-weight: bold;
 }
 
 
@@ -446,14 +640,78 @@ Header input{
 .claseHide{
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.475s ease, visibility 0s 0.375s;
+    transition: opacity 0.475s ease; /* visibility 0s 0.375s; */
 }
 .claseShow{
     opacity: 1;
     visibility: visible;
-    transition: opacity 0.475s ease, visibility 0s;
+    transition: opacity 0.475s ease; /* visibility 0s; */
+}
+
+
+
+/* ----------Medias Querys------------ */
+
+@media (max-width: 1024px) {
+    *{
+      font-size: 14px; /* Cambio de tamaño de fuente para pantallas más grandes */
+    }
+    .contenedorDeContenedores{
+        height: 100%;
+        margin-bottom: 1.5rem;
+    }
+    .detailProductsCompleto{
+        flex-direction: column;
+        gap: 5px
+    }
+    .detailProdResto{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .filters{
+        width: 100%;
+    }
+   /*  .barrita{
+        width: 100px;
+        width: 100%;
+    } */
+}
+
+@media (max-width: 800) {
+
+
 }
 
 
 
 
+@media (max-width: 360px) {
+    *{
+      font-size: 11px; /* Cambio de tamaño de fuente para pantallas más grandes */
+    }
+    #NombreMarca{
+        display: none;
+    }
+    .contenedorImagenCards img{
+        width: 110px;
+        height: 110px;
+    }
+    .tarjetasProducto{
+        height: 260px;
+    }
+    .tarjetasProducto .contenedorImagenCards{
+        justify-content: center;
+        align-items: center;
+        width: 110px;
+        height: 110px;
+    }
+   /*  .barrita{
+        width: 60px;
+    } */
+}
+   /*  html{
+        font-size: 14px;
+    }
+} */

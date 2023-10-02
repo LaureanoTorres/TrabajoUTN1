@@ -1,6 +1,7 @@
 import React from 'react'
 import { useGlobalContext } from '../context/GlobalContextProvider'
 import {IoCartOutline} from 'react-icons/io5'
+import {AiFillHome} from 'react-icons/ai'
 import { NavLink } from 'react-router-dom'
 import '../styles/Header.css'
 import { useFilterContext } from '../context/FilterContextProvider'
@@ -13,9 +14,10 @@ const Header = () => {
     <header>
    {/*    <NavBar></NavBar> */}
     {/*   <a href="/public/mediaaaa/Logo.png"></a>  */}
+      <img id='logoTech' src='/public/imagenes/Logo.png'></img>
       <h2 id='NombreMarca'> TechStore </h2>
       <input placeholder='Buscá tu producto' value={searchString}  onChange={handleFilterProducto} />
-      <NavLink id='NavCatalogo'to={'/home'}>Ir al Catalogo</NavLink>
+      <NavLink id='NavCatalogo'to={'/home'}><AiFillHome/> Ir al Catalogo</NavLink>
       <NavLink id='NavContacto'to={'/contact'}>Ir a Contacto </NavLink>
       <NavLink id='NavCarrito' to={'/cart'}> 
           {<IoCartOutline/>}

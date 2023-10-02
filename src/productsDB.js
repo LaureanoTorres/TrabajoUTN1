@@ -5,7 +5,10 @@ export const products = [
         nombre: 'MacBook Air M1',
         marca: 'Apple',
         precio: 999,
-        descipcion: 'Apple Macbook Air (13 pulgadas, 2020, Chip M1, 256 GB de SSD, 8 GB de RAM) - Oro',
+        descipcion:`adsasdasad \n\n asdasd
+        asdasd
+        \n\nasdasd/`,
+        modeloExacto: 'Apple Macbook Air (13 pulgadas, 2020, Chip M1, 256 GB de SSD, 8 GB de RAM) - Oro',
         coloresDisponibles: ['Negro', 'Dorado', 'Gris'],
         img: "/public/imagenes/MacBook Air 1.png",
         memoria: 256
@@ -16,7 +19,34 @@ export const products = [
         nombre: 'MacBook Air M2',
         marca: 'Apple',
         precio: 1199,
-        descipcion: 'Macbook Air 13 M2 Chip 256gb 8gb - Gris Espacial',
+        descipcion:  
+            `El MacBook \n\ Pro de 13 pulgadas es más capaz que nunca.     Sobrealimentado por el chip M2 de última generación, es el portátil profesional más portátil de Apple, con hasta 20 horas de duración de la batería.
+        
+            Características
+            SUPERCARGADO POR M2
+            La computadora portátil MacBook Pro de 13 pulgadas es una potencia portátil. Haga más cosas más rápido con una CPU de 8 núcleos de última generación, una GPU de 10 núcleos y hasta 24 GB de memoria unificada.
+            
+            HASTA 20 HORAS DE DURACIÓN DE LA BATERÍA
+            Pasa todo el día y hasta la noche gracias al rendimiento de bajo consumo del chip Apple M2
+            
+            RENDIMIENTO SOSTENIDO
+            Gracias a su sistema de enfriamiento activo, la MacBook Pro de 13 pulgadas puede mantener niveles profesionales de rendimiento, por lo que puede ejecutar tareas intensivas de CPU y GPU durante horas y horas.
+            
+            PANTALLA BRILLANTE
+            La pantalla Liquid Retina de 13,3 pulgadas cuenta con 500 nits de brillo y color amplio P3 para imágenes vibrantes y detalles increíbles
+            
+            CÁMARA HD Y MICRÓFONOS CON CALIDAD DE ESTUDIO
+            Luzca nítido y suene genial con una cámara FaceTime HD y una matriz de tres micrófonos.
+            
+            CONECTIVIDAD VERSÁTIL
+            Dos puertos Thunderbolt le permiten conectar y alimentar accesorios de alta velocidad.
+            
+            FÁCIL DE USAR
+            Su Mac se siente familiar desde el momento en que la enciende y funciona a la perfección con todos sus dispositivos Apple.
+            
+            SIMPLEMENTE COMPATIBLES
+            Todas sus aplicaciones favoritas se ejecutan a la velocidad de la luz, incluidas Microsoft 365, Zoom y muchas de sus aplicaciones favoritas para iPhone y iPad.`,
+        modeloExacto: 'Macbook Air 13 M2 Chip 256gb 8gb - Gris Espacial',
         coloresDisponibles: ['Negro', 'Dorado', 'Gris'],
         img: "/public/imagenes/MacBook air 2.png",
         memoria: 1024
@@ -176,8 +206,36 @@ export const products = [
         img: "/public/imagenes/galaxy book 3 pro.webp",
         memoria: 512
     }
-
-
-
-
 ]
+
+
+
+/* 
+<p>
+El MacBook Pro de 13 pulgadas es más capaz que nunca. Sobrealimentado por el chip M2 de última generación, es el portátil profesional más portátil de Apple, con hasta 20 horas de duración de la batería.
+
+Características
+SUPERCARGADO POR M2
+La computadora portátil MacBook Pro de 13 pulgadas es una potencia portátil. Haga más cosas más rápido con una CPU de 8 núcleos de última generación, una GPU de 10 núcleos y hasta 24 GB de memoria unificada.
+
+HASTA 20 HORAS DE DURACIÓN DE LA BATERÍA
+Pasa todo el día y hasta la noche gracias al rendimiento de bajo consumo del chip Apple M2
+
+RENDIMIENTO SOSTENIDO
+Gracias a su sistema de enfriamiento activo, la MacBook Pro de 13 pulgadas puede mantener niveles profesionales de rendimiento, por lo que puede ejecutar tareas intensivas de CPU y GPU durante horas y horas.
+
+PANTALLA BRILLANTE
+La pantalla Liquid Retina de 13,3 pulgadas cuenta con 500 nits de brillo y color amplio P3 para imágenes vibrantes y detalles increíbles
+
+CÁMARA HD Y MICRÓFONOS CON CALIDAD DE ESTUDIO
+Luzca nítido y suene genial con una cámara FaceTime HD y una matriz de tres micrófonos.
+
+CONECTIVIDAD VERSÁTIL
+Dos puertos Thunderbolt le permiten conectar y alimentar accesorios de alta velocidad.
+
+FÁCIL DE USAR
+Su Mac se siente familiar desde el momento en que la enciende y funciona a la perfección con todos sus dispositivos Apple.
+
+SIMPLEMENTE COMPATIBLES
+Todas sus aplicaciones favoritas se ejecutan a la velocidad de la luz, incluidas Microsoft 365, Zoom y muchas de sus aplicaciones favoritas para iPhone y iPad.
+</p> */
