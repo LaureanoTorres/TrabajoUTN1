@@ -10,7 +10,6 @@ const {ListaProductos,SearchString, handleClaseOculta} = useFilterContext()
   return (
     
     <div className='componentesDelHome'>
-      <div className=''>
           
             <div className='separadorHome'>
                   <h1>Bienvenido a TechStore</h1> 
@@ -31,7 +30,6 @@ const {ListaProductos,SearchString, handleClaseOculta} = useFilterContext()
                     <div className='sidebar'>
                             <Filtradores/>
                       </div>
-    </div>
     </div>
     </div>
     
