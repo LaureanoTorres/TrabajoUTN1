@@ -24,7 +24,7 @@ Magic Keyboard retroiluminado y Touch ID para desbloquear tu MacBook Air de form
 macOS con un diseño impactante e intuitivo, que funciona a la perfección con tu iPhone.`,
         modeloExacto: 'Apple Macbook Air (13 pulgadas, 2020, Chip M1, 256 GB de SSD, 8 GB de RAM) - Oro',
         coloresDisponibles: ['Negro', 'Dorado', 'Gris'],
-        img: "/public/imagenes/MacBook Air 1.png",
+        img: "/imagenes/MacBook Air 1.png",
         memoria: 256
     },
     {
@@ -62,7 +62,7 @@ SIMPLEMENTE COMPATIBLES
 Todas sus aplicaciones favoritas se ejecutan a la velocidad de la luz, incluidas Microsoft 365, Zoom y muchas de sus aplicaciones favoritas para iPhone y iPad.`,
         modeloExacto: 'Macbook Air 13 M2 Chip 256gb 8gb - Gris Espacial',
         coloresDisponibles: ['Negro', 'Dorado', 'Gris'],
-        img: "/public/imagenes/MacBook air 2.png",
+        img: "/imagenes/MacBook air 2.png",
         memoria: 1024
     },
     {
@@ -81,7 +81,7 @@ Todas sus aplicaciones favoritas se ejecutan a la velocidad de la luz, incluidas
 IEC 60529 (hasta 30 minutos a una profundidad máxima de 6 metros). La resistencia a las salpicaduras, al agua y al polvo no es una condición permanente, y podría disminuir como consecuencia del uso normal. No intentes cargar un iPhone mojado; consulta el manual del usuario para ver las instrucciones de limpieza y secado. La garantia no cubre daños producidos por líquidos.`,
         modeloExacto: 'Apple iPhone 15 Plus (64 GB) - Negro',
         coloresDisponibles: ['Negro', 'Blanco', 'Azul'],
-        img: "/public/imagenes/iphone 15 sin color ...jpeg",
+        img: "/imagenes/iphone 15 sin color ...jpeg",
         memoria: 64
     },
     {
@@ -108,7 +108,7 @@ Wi-Fi 6 de última generación para una conectividad más rápida.
 Magic Keyboard retroiluminado con TouchID para desbloquear tu MacBookPro.`,
         modeloExacto: 'Apple Macbook Pro 14 Pulgadas M1 Pro 512 Gb Ssd - Plateado Color Plata',
         coloresDisponibles: ['Negro', 'Plateado', 'Blanco'],
-        img: "/public/imagenes/MacBook pro 14''.png",
+        img: "/imagenes/MacBook pro 14''.png",
         memoria: 512
     },
     {
@@ -135,7 +135,7 @@ Conexión invisible
 Este modelo está pensado para que puedas despejar tu campo visual. El sector donde coloques el televisor se verá mucho más prolijo porque los cables estarán ocultos, ordenados y organizados, ¡vas a notar la diferencia!`,
         modeloExacto: 'Samsung Neo QLED 4K 75"- Negro',
         coloresDisponibles: ['Negro'],
-        img: "/public/imagenes/neoqled75 transp.avif",
+        img: "/imagenes/neoqled75 transp.avif",
         memoria: 4
     },
     {
@@ -164,7 +164,7 @@ FUNCIONALIDAD ESENCIAL DE SEGURIDAD — Con Detección de Choques, el iPhone pue
 INNOVACIONES QUE MARCAN LA DIFERENCIA — El iPhone cuenta con tecnologías de privacidad que te ayudan a mantener el control de tus datos. Está fabricado con más materiales reciclados para reducir su impacto medioambiental. Y viene con funcionalidades integradas que lo hacen accesible para todo el mundo.`,
         modeloExacto: 'Apple iPhone 15 Pro Max (512 GB) - Titanio Azul',
         coloresDisponibles: ['Negro', 'Azul' ,'Blanco', 'Plateado'],
-        img: "/public/imagenes/iphone 15 pro max.webp",
+        img: "/imagenes/iphone 15 pro max.webp",
         memoria: 128
     },
     {
@@ -191,7 +191,7 @@ Conexión invisible
 Este modelo está pensado para que puedas despejar tu campo visual. El sector donde coloques el televisor se verá mucho más prolijo porque los cables estarán ocultos, ordenados y organizados, ¡vas a notar la diferencia!`,
         modeloExacto: 'Samsung Neo QLED 4K 55"- Negro',
         coloresDisponibles: ['Negro'],
-        img: "/public/imagenes/Samsung QLED 4K.png",
+        img: "/imagenes/Samsung QLED 4K.png",
         memoria: 4
     },
     {
@@ -214,7 +214,7 @@ Batería de duración superior: Desenchúfate con la súper batería de 3700 mAh
 Capacidad de almacenamiento ilimitada: olvídate de borrar. Con su memoria interna de 512 GB podrás descargar todos los archivos y aplicaciones que necesites, guardar fotos y almacenar tus películas, series y videos favoritos para reproducirlos cuando quieras.`,
         modeloExacto:'Samsung Galaxy Z Flip5 8gb + 512gb Color Menta',
         coloresDisponibles: ['Negro', 'Menta', 'Azul', 'Blanco'],
-        img: "/public/imagenes/galaxy z flip 5.avif",
+        img: "/imagenes/galaxy z flip 5.avif",
         memoria: 256
     },
     {
@@ -242,7 +242,7 @@ Batería de duración superior
 ¡Desenchufate! Con la súper batería de 4400 mAh tendrás energía por mucho más tiempo para jugar, ver series o trabajar sin necesidad de realizar recargas.`,
         modeloExacto: 'Samsung Galaxy Z Fold5 512gb Icy Blue',
         coloresDisponibles: ['Blanco', 'Negro', 'Azul', 'Plateado'],
-        img: "/public/imagenes/Galaxy Fold 5.webp",
+        img: "/imagenes/Galaxy Fold 5.webp",
         memoria: 256
     },
     {
@@ -261,7 +261,7 @@ Batería de duración superior
 IEC 60529 (hasta 30 minutos a una profundidad máxima de 6 metros). La resistencia a las salpicaduras, al agua y al polvo no es una condición permanente, y podría disminuir como consecuencia del uso normal. No intentes cargar un iPhone mojado; consulta el manual del usuario para ver las instrucciones de limpieza y secado. La garantia no cubre daños producidos por líquidos.`,
         modeloExacto:'Apple iPhone 15 (64 GB) - Negro',
         coloresDisponibles: ['Negro', 'Blanco'],
-        img: "/public/imagenes/iphone 15 sin color ...jpeg",
+        img: "/imagenes/iphone 15 sin color ...jpeg",
         memoria: 64
     },
     {
@@ -289,7 +289,7 @@ Una batería que acompaña tu jornada
 La batería de este equipo tiene una autonomía de alrededor de 8 horas. La duración varía según el uso, la configuración y otros factores, pero vas a poder usarla durante varias horas sin depender de los enchufes.`,
         modeloExacto:'Samsung Galaxy Book3 15.6 Intel Core I3 6 Núcleos 8gb 256gb Color Plateado',
         coloresDisponibles: ['Negro', 'Plateado', 'Blanco', 'Rosa'],
-        img: "/public/imagenes/samsung-book-3.webp",
+        img: "/imagenes/samsung-book-3.webp",
         memoria: 256
     },
     {
@@ -316,7 +316,7 @@ Capacidad de la memoria interna de 7.5GB.
 La duración de la batería depende del uso que se le dé al producto.`,
         modeloExacto:'Reloj Samsung Galaxy Watch5 44 Inteligente Bluetooth Gris Color De La Caja Blanco',
         coloresDisponibles: ['Negro', 'Gris', 'Blanco'],
-        img: "/public/imagenes/samsung watch 5 sin color.avif",
+        img: "/imagenes/samsung watch 5 sin color.avif",
         memoria: 4
     },
     {
@@ -355,7 +355,7 @@ Resistente al polvo.
 Tarjeta eSIM incluida.`,
 modeloExacto:'Google Pixel 7 Pro 256 GB Negro 12 GB RAM',
         coloresDisponibles: ['Blanco', 'Negro', 'Azul'],
-        img: "/public/imagenes/pixel7pro transpa.png",
+        img: "/imagenes/pixel7pro transpa.png",
         memoria: 256
     },
     {
@@ -377,7 +377,7 @@ Un puerto Thunderbolt 3 y tres puertos USB-C.
 96 W de potencia para cargar una notebook Mac.`,
         modeloExacto:'Apple Studio Display - Vidrio estándar - Base con inclinación ajustable',
         coloresDisponibles: ['Negro', 'Gris', 'Blanco'],
-        img: "/public/imagenes/studiodisplay sin color cuadrada.jpg",
+        img: "/imagenes/studiodisplay sin color cuadrada.jpg",
         memoria: 4
     },
     {
@@ -416,7 +416,7 @@ Rango de ajuste de la malla: 160 mm x 210 mm.
 Posee protección IP6X.`,
         modeloExacto: 'Apple Watch 9 Gps 45mm Caja Aluminio Color Pink Rosa - Correa Deportiva Rosa',
         coloresDisponibles: ['Negro', 'Blanco', 'Gris'],
-        img: "/public/imagenes/applewatch9 sin color.jpeg",
+        img: "/imagenes/applewatch9 sin color.jpeg",
         memoria: 4
     },
     {
@@ -442,7 +442,7 @@ Contenido de la caja:
 • Guía de inicio rápido.`,
         modeloExacto:'Samsung Galaxy Book3 Pro 14 Intel Core I5 12 Núcleos 16gb Color Graphite',
         coloresDisponibles: ['Negro', 'Grafito', 'Blanco'],
-        img: "/public/imagenes/galaxy book 3 pro.webp",
+        img: "/imagenes/galaxy book 3 pro.webp",
         memoria: 512
     }
 ]
