@@ -1,5 +1,5 @@
 import React from 'react'
-import {BiSolidDownArrow} from 'react-icons/Bi'
+/* import {BiSolidDownArrow} from 'react-icons/bi' */
 import { useFilterContext } from '../context/FilterContextProvider'
 
 const Filtradores = () => {
