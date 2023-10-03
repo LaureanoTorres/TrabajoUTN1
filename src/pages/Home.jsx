@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import {BiSolidDownArrow} from 'react-icons/Bi'
+import {BiSolidDownArrow} from 'react-icons/bi'
 import { useFilterContext } from '../context/FilterContextProvider'
 import { Filtradores } from '../components'
 
