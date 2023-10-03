@@ -11,7 +11,6 @@ const {ListaProductos,SearchString, handleClaseOculta} = useFilterContext()
     
     <div className='componentesDelHome'>
           <div className='separadorHome'>
-             {/*  <h1 >Bienvenido a TechStore</h1>  */}
               <h1 className='tituloPrincipal'>Bienvenido a TechStore</h1> 
               <h3 id='toggleFiltradores' onClick={handleClaseOculta}>Desplegar Filtradores <BiSolidDownArrow className='BiSolidDownArrow' onClick={handleClaseOculta}/>
               </h3> 
@@ -54,7 +53,6 @@ const Card = ({categoria, nombre, precio, id, img, memoria}) => {
         <h3>Categoria: {categoria}</h3>
         
         <span>${precio}</span>
-      {/*   <span>{memoria}GB</span> */}
         <Link className='tarjetasVerDetalle' to={'/detail/' + id}>Ver detalle</Link>
       </div>
   )

@@ -5,7 +5,7 @@ import {AiFillHome, AiOutlineMenu} from 'react-icons/ai'
 import { NavLink } from 'react-router-dom'
 import '../styles/Header.css'
 import { useFilterContext } from '../context/FilterContextProvider'
-import NavBar from './NavBar'
+/* import NavBar from './NavBar' */
 
 const Header = () => {
   const {searchString, handleFilterProducto,MenuHamburgesa, toggleMenuHamburgesa } = useFilterContext()

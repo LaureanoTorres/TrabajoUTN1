@@ -6,7 +6,6 @@ import { useGlobalContext } from '../context/GlobalContextProvider'
 
 
 const ProductDetail = () => {
-    /* const {id} = useParams()  desestrucutramos al id, forma alt mejor*/
     const rute = useParams() 
     const productFound = products.find((product) => product.id === Number(rute.id) )
     const {handleAddProduct, isInCart, findProductCart, handleDeleteProduct} = useGlobalContext()

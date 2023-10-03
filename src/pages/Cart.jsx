@@ -39,7 +39,6 @@ const CartItem = ({categoria, nombre, precio, id, quantity, img}) => {
   console.log(productFound)
   console.log(products)
   console.log(rute)
-/*   console.log(productFound.id) */
   console.log('asda')
 
   return (
@@ -53,7 +52,7 @@ const CartItem = ({categoria, nombre, precio, id, quantity, img}) => {
         <span>Cantidad seleccionada: {quantity} </span>
         <Link className='tarjetasVerDetalle' to={'/detail/' + id}>Ver detalle</Link>
 
-             <ProductCartButton id={id}/>
+          <ProductCartButton id={id}/>
               
 
     </div>

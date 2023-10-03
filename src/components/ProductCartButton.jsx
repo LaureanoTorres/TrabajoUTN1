@@ -13,7 +13,6 @@ const ProductCartButton = ({id}) => {
                 <button className='btnCompra' onClick={() => handleDeleteProduct(id)}>
                     -
                 </button>
-             {/*    {findProductCart(id).quantity} */}
                 <span className='cantidadEnCarrito'>{findProductCart(id).quantity}</span>
                 <button className='btnCompra' onClick={() => handleAddProduct (id)}>
                     +
@@ -24,7 +23,7 @@ const ProductCartButton = ({id}) => {
         }
 
     </>
-  )
+)
 }
 
 export default ProductCartButton

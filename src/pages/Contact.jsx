@@ -29,7 +29,6 @@ const Contact = () => {
       <div  className='checkboxDerecha'>
       <label htmlFor='terminosCondiciones' className='terminosCondiciones'> ¿Acepta nuestros terminos y condiciones?</label>
       <input type="checkbox" name='terminosCondiciones' required /><br/>
-      {/* <a href="/Terminos-y-Condiciones" target='_blank'></a VER LUEGO> */}
       </div>
       <br/>
       <input type="submit" value='Enviar' id='formSubmit' />
