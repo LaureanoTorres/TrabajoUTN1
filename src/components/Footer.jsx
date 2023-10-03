@@ -1,4 +1,7 @@
 import React from 'react'
+import {AiOutlineInstagram, AiOutlineTwitter} from 'react-icons/ai'
+import {BsFacebook} from 'react-icons/bs'
+
 
 const Footer = () => {
     return (
@@ -32,9 +35,9 @@ const Footer = () => {
             <div className="redesSociales">
                 <h3 className='tituloInfos'>Seguinos en Redes Sociales</h3>
                 <br/>
-                <a href="#" className="linkRedesSociales">Facebook: @TechStoreOficial</a> 
-                <a href="#" className="linkRedesSociales">Twitter: @TechStoreOficial</a> 
-                <a href="#" className="linkRedesSociales">Instagram: @TechStoreOficial</a>
+                <a href="#" className="linkRedesSociales"><BsFacebook className='logoFacebook'/> Facebook: @TechStoreOficial</a> 
+                <a href="#" className="linkRedesSociales"><AiOutlineTwitter className='logoTwitter'/> Twitter: @TechStoreOficial</a> 
+                <a href="#" className="linkRedesSociales"><AiOutlineInstagram className='logoInstagram'/> Instagram: @TechStoreOficial</a>
             </div>
             
             

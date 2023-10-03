@@ -41,7 +41,7 @@ const ProductDetail = () => {
                 
             </div>
             <div className='divDescripcionProducto'>
-                <p>{productFound.descipcion}</p>
+                <p className='descripcionProducto'>{productFound.descipcion}</p>
             </div>
         </>
         :

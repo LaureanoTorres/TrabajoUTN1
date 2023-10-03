@@ -99,7 +99,6 @@ const handlePriceChangeMax = (event) => {
  
 const handleClaseOculta = ()=> {
   setClaseOculta(!ClaseOculta);
-  console.log(ClaseOculta)
 }
 
 

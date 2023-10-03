@@ -6,7 +6,6 @@
 }
 
 :root{
-    /* --color-background: rgba(195, 202, 217, 1); */
     --color-background: rgb(197, 201, 208);
     --color-primario: rgb(20, 58, 134);
 }
@@ -16,9 +15,7 @@
     width: 100vw;
 }
 
-/* header{
-    height: 64px;
-} */
+
 .divDelHeader{
     background-color: var(--color-background);
     display: flex;
@@ -152,8 +149,6 @@
     gap: 8px;
     padding-top: 10px;
     z-index: 4;
-/* }
-.NavBarVertical { */
     transform: scaleY(0);
     transform-origin: top;
     transition: transform 0.3s ease-in-out;
@@ -163,10 +158,10 @@
     right: 0;
     z-index: 3; 
 }
-  
-  .NavBarVertical.ClaseShow {
+
+.NavBarVertical.ClaseShow {
     transform: scaleY(1);
-  }
+}
 
 
 /* -------------carrito------------- */
@@ -285,7 +280,6 @@
     justify-content: center;
     max-width: 600px;
     width: 50%;
-    /* min-width: 400px; */
     border: 1px solid rgb(148, 147, 147);
     border-radius: 14px;
     margin: auto;
@@ -474,6 +468,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    align-content: start;
     gap: 20px;
     width: 75%;
 
@@ -525,7 +520,9 @@
     color: var(--color-primario);
 }
 /* -----------detaill Productos--------- */
-
+.descripcionProducto{
+    white-space: pre-wrap;
+}
 .contenedorProductDetail{
     height: 100%;
     min-height: 100vh;
@@ -734,6 +731,7 @@ footer .redesSociales{
     display: flex;
     flex-direction: column;
     text-decoration: none;
+    gap: 1px;
 }
 footer .redesSociales a{
     text-decoration: none;
@@ -744,7 +742,22 @@ footer .redesSociales a{
     font-weight: bold;
 }
 
-
+.logoInstagram{
+    background: radial-gradient(
+        circle at 33% 100%,
+        #FED373 7%,
+        #F15245 30%,
+        #D92E7F 62%,
+        #9B36B7 85%,
+        #515ECF);
+        border-radius: 30%;
+}
+.logoTwitter{
+    color: #00ACEE;
+}
+.logoFacebook{
+    color: #3B5998;
+}
 
 /* -----------clase especial --------- */
 .claseHide{
@@ -946,8 +959,10 @@ footer .redesSociales a{
     .tarjetasProducto{
         height: 220px;
         width: 170px;
+        gap: 5px;
 
     }
+    
     .tarjetasProducto .contenedorImagenCards{
         justify-content: center;
         align-items: center;
@@ -959,6 +974,9 @@ footer .redesSociales a{
     }
     .formulario input{
         min-width: 100px;
+    }
+    .contenedorImagenCards img{
+        width: 112px;
     }
 
 }
@@ -981,6 +999,7 @@ footer .redesSociales a{
     .tarjetasProducto{
         height: 250px;
         width: 225px;
+        gap: 10px;
     }
     .tarjetasProducto .contenedorImagenCards{
         justify-content: center;
