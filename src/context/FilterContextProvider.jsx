@@ -24,7 +24,10 @@ const [PriceRangeMin, setPriceRangeMin] = useState(0);
 
 const [PriceRangeMax, setPriceRangeMax] = useState(2500);
 
-const[ClaseOculta, setClaseOculta] = useState(false)
+const[ClaseOculta, setClaseOculta] = useState(false);
+
+const [MenuHamburgesa, setMenuHamburgesa] = useState(false); 
+
 
 
 
@@ -62,10 +65,7 @@ useEffect(()=>{
   if(PriceRangeMax !==2500){
     productosFiltrados = productosFiltrados.filter(producto => producto.precio <= PriceRangeMax)
   }
- /*  if(SearchString.length !==0 && SearchString!=='' && SearchString!==undefined){
-    console.log('esta funcionando')
-    productosFiltrados = productosFiltrados.filter(producto => producto.nombre.toLocaleLowerCase().includes(SearchString.toLocaleLowerCase()))
-  } */
+
   setListaProductos(productosFiltrados)
 
 }, [CategoriasSeleccionada, MarcasSeleccionadas, PriceRangeMin, PriceRangeMax]
@@ -99,8 +99,14 @@ const handlePriceChangeMax = (event) => {
  
 const handleClaseOculta = ()=> {
   setClaseOculta(!ClaseOculta);
+  console.log(ClaseOculta)
 }
 
+
+
+const toggleMenuHamburgesa = () => {
+  setMenuHamburgesa(!MenuHamburgesa);
+};
 
 
   return (
@@ -121,7 +127,9 @@ const handleClaseOculta = ()=> {
       handlePriceChangeMin,
       handlePriceChangeMax,
       handleClaseOculta,
-      ClaseOculta
+      ClaseOculta,
+      MenuHamburgesa,
+      toggleMenuHamburgesa
       }}>
       {children}
     </FilterContext.Provider>

@@ -11,7 +11,7 @@ const Cart = () => {
   return (
     
     <div className='contenedorPaginaCarrito'>
-        <h2>Su carrito</h2>
+        <h2>Su carrito de compras:</h2>
         <div className='paginaCarrito'>
           {
             cart.length > 0
@@ -25,7 +25,6 @@ const Cart = () => {
         </div>
         <span className='totalCart'>Total a pagar: ${getTotalCart()}</span>
         <button className='btnComprarFinal'>Comprar</button>
-        <span>final carrito</span>
     </div>
   )
 }

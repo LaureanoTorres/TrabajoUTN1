@@ -4,14 +4,14 @@ import { useFilterContext } from '../context/FilterContextProvider'
 
 const Filtradores = () => {
     const {
-      handleCheckCategoriaSeleccionada,
-      handleCheckMarcaSeleccionada,
-      PriceRangeMin,
-      PriceRangeMax,
-      handlePriceChangeMin,
-      handlePriceChangeMax,
-      handleClaseOculta,
-      ClaseOculta} = useFilterContext()
+    handleCheckCategoriaSeleccionada,
+    handleCheckMarcaSeleccionada,
+    PriceRangeMin,
+    PriceRangeMax,
+    handlePriceChangeMin,
+    handlePriceChangeMax,
+    handleClaseOculta,
+    ClaseOculta} = useFilterContext()
 
 
 
@@ -67,5 +67,3 @@ const Filtradores = () => {
 export default Filtradores
 
 
-
-/* const FiltradorMarca = () */

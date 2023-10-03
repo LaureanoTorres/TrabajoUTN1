@@ -16,7 +16,10 @@
     width: 100vw;
 }
 
-Header{
+/* header{
+    height: 64px;
+} */
+.divDelHeader{
     background-color: var(--color-background);
     display: flex;
     flex-wrap: wrap;
@@ -43,31 +46,41 @@ Header{
 }
 
 
-Header h2{
+.divDelHeader h2{
     color: var(--color-primario);
 }
-Header input{
+.divDelHeader input{
     border-radius: 8px;
     border: 1px solid gray;
-    width: 30%;
-    height: 33px;
+    width: 26%;
+    height: 36px;
     padding: 3px;
+    padding-left: 1.5%;
+    font-size: 1.35rem;
+    color: var(--color-primario);
+}
+
+.NavLiksToHide{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 3rem;
 }
 
 #NavCatalogo{
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     font-weight: 550;
     color: var(--color-primario);
 } 
-.AiFillHome{
-    font-size: 2.2rem;
-    color: rebeccapurple;
-    background-color: aqua;
-}
+
 #NavContacto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     font-weight: 550;
     color: var(--color-primario);
 }
@@ -76,11 +89,85 @@ Header input{
     font-weight: 300;
     color: var(--color-primario);
     padding-right: 5px;
+    display: flex;
+    text-decoration: none;
 }
 .IoCartOutline{
-    width: 2.2rem;
-    color: red;
+    font-size: 2.5rem;
+    display: flex;
+    gap: 10px;
+    font-weight: bold;
+    color: var(--color-primario)
 }
+.carritoNumero{
+    font-size: 2rem;
+    position: relative;
+    bottom: 5px;
+}
+.MenuDesplegableHamburguesa{
+    display: flex;
+}
+
+.MenuDesplegableHamburguesa button{
+    display: none;
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 3px;
+}
+.AiOutlineMenu{
+    display: flex;
+    align-self: center;
+    counter-reset: var(--color-primario);
+    height: 31px;
+    width: 31px;
+}
+.AiFillHome{
+    font-size: 2rem;
+    color: var(--color-primario);
+    display: none;
+}
+
+
+.segundoHeader{
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    justify-content: end;
+    align-items: end;
+    right: 1%;
+    padding: 0.5% 2%;
+}
+
+.tituloPrincipal{
+    font-size: 2.4rem;
+    color: var(--color-primario);
+}
+
+
+.NavBarVertical{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    gap: 8px;
+    padding-top: 10px;
+    z-index: 4;
+/* }
+.NavBarVertical { */
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease-in-out;
+    background-color: transparent; 
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 3; 
+}
+  
+  .NavBarVertical.ClaseShow {
+    transform: scaleY(1);
+  }
+
 
 /* -------------carrito------------- */
 .contenedorPaginaCarrito{
@@ -90,7 +177,15 @@ Header input{
     width: 100vw;
     min-height: 100vh;
     height: 100%;
-    background-color: pink;
+    padding-top: 8%;
+}
+.contenedorPaginaCarrito h2{
+    color: var(--color-primario);
+    font-size: 1.8rem;
+}
+.contenedorPaginaCarrito .totalCart{
+    color: var(--color-primario);
+    font-size: 1.8rem;
 }
 
 .contenedorPaginaCarrito .totalCart{
@@ -105,6 +200,7 @@ Header input{
     justify-content: center;
     gap: 20px;
     padding: 1.5%;
+
 }
 .btnComprarFinal{
     width: 13rem;
@@ -124,6 +220,8 @@ Header input{
     transform: scale(1.02);
     transition: 0.475s ease;
     box-shadow: 2px 2px 1px 2px lightgray;
+    background-color: var(--color-primario);
+    color: white;
 
 }
 .tarjetasCarrito{
@@ -131,7 +229,7 @@ Header input{
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    border: 1px solid gray;
+    border: 1px solid lightgrey;
     background-color: white;
     border-radius: 18px;
     box-shadow: 3px 3px 2px 1px lightgray;
@@ -156,7 +254,7 @@ Header input{
 
 
 .tarjetasCarrito img{
-    width: 110px;
+    width: 125px;
 }
 .tarjetasCarrito h2{
     font-size: 1.2rem;
@@ -175,6 +273,11 @@ Header input{
 
 
 /* --------formulario-------- */
+.contenedorDeContenedorFormulario{
+    min-height: 100vh;
+    margin-top: 15%;
+}
+
 .contendedorFormulario{
     display: flex;
     flex-direction: column;
@@ -182,6 +285,7 @@ Header input{
     justify-content: center;
     max-width: 600px;
     width: 50%;
+    /* min-width: 400px; */
     border: 1px solid rgb(148, 147, 147);
     border-radius: 14px;
     margin: auto;
@@ -287,14 +391,18 @@ Header input{
     display: flex;
     flex-direction: row;
     gap: 5px;
+    padding: 1% 0%;
 /*     width:75%;
  */}
 .separadorHome{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
-    gap: 10px;
+   /*  height: 40px; */
+    gap: 5px;
     color:  var(--color-primario);
+    font-size: 1.2rem;
+    padding-left: 1%;
 }
 .separadorHome h1{
     font-size: 2.4rem;
@@ -303,7 +411,9 @@ Header input{
 .separadorHome h3:hover{
     cursor: pointer;
 }
-
+#toggleFiltradores{
+    padding-left: 1%;
+}
 
 .sidebar{
     width: 24.5%;
@@ -319,12 +429,13 @@ Header input{
     display: flex;
     flex-direction: row;
     align-items: center;
+    height: 100%;
 }
 .BiSolidDownArrow{
-    color: lawngreen;
-    background-color: aqua;
-    font-size: 89px;
+    color: var(--color-primario);
+    font-size: 1.8em;
 }
+
 
 .contenedorFiltros{
     width: 100%;
@@ -421,22 +532,21 @@ Header input{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    margin-top: 10%;
+    gap: 25px;
 }
 
 .contenedorDeContenedores{
     display: flex;
-    border: 1px solid gold;
     justify-content: center;
     align-items: center;
     border-radius: 3%;
     width: 80%;
-    height: 400px;
+    height: 420px;
 }
 .contenedorDivs{
     display: flex;
     flex-direction: column;
-    align-items: start;
     border: 1px solid lightgray;
     background-color: white;
     border-radius: 5%;
@@ -577,7 +687,6 @@ Header input{
 
 
 .divDescripcionProducto{
-    background-color: paleturquoise;
     display: flex;
     width: 80%;
 }
@@ -654,13 +763,12 @@ footer .redesSociales a{
 /* ----------Medias Querys------------ */
 
 @media (max-width: 1350px) {
+    
     html{
-        font-size: 13px;
+        font-size: 15px;
     }
-
-    .contenedorImagenCards img{
-        width: 125px;
-    /*     height: 125px; */
+    .NavLiksToHide{
+        gap: 2.5rem;
     }
     .tarjetasProducto{
         height: 270px;
@@ -673,26 +781,69 @@ footer .redesSociales a{
         width: 125px;
         height: 125px;
     }
+    .contenedorImagenCards .imagenCards{
+        width: 125px;
+    }
+    .divNombreProductos{
+        height: 25px;
+    }
 
+    .detailProductsCompleto .detailProdImagen{
+        width: 240px;
+        height: 240px;
+    }
+
+    .detailProdResto{
+        width: 260px;
+    }
+    
 }
 
 @media (max-width: 1024px) {
     html{
-      font-size: 14px; /* Cambio de tamaño de fuente para pantallas más grandes */
+        font-size: 14px;
     }
     .contenedorDeContenedores{
         height: 100%;
-        margin-bottom: 1.5rem;
+    }
+    .NavLiksToHide{
+        gap: 2rem;
+    }
+    #logoTech {
+        width: 35px;
+        height: 35px;
+    }
+    #Nombremarca{
+        font-size: 2.3rem;
+    }
+    .contenedorDivs{
+        width: 385px;
+        height: 520px;
+    }
+    .divNombreProductos{
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .detailProductsCompleto{
         flex-direction: column;
+        align-items: center;
+        padding: 0px 10px;
         gap: 5px
+    }
+    .detailProdImagen{
+        width: 180px;
+    }
+    .detailProdImagen .contenedorFoto{
+        width: 240px;
+        height: 240px;
     }
     .detailProdResto{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        width: 285px;
     }
     .filters{
         width: 100%;
@@ -720,7 +871,12 @@ footer .redesSociales a{
     html{
         font-size: 13px;
     }
-
+    .spanNavCatalogo{
+        display: none;
+    }
+    .AiFillHome{
+        display: flex;
+    }
     .contenedorImagenCards img{
         width: 125px;
      /*    height: 125px; */
@@ -736,19 +892,45 @@ footer .redesSociales a{
         width: 125px;
         height: 125px;
     }
-
+    .componentesDelHome{
+        margin-top: 5%;
+    }
+    .NavLiksToHide{
+        display: none;
+    }
+    .MenuDesplegableHamburguesa button{
+        display: flex;
+    }
+    #NavContacto{
+        font-size: 2.3rem;
+    }
+    .contendedorFormulario{
+        width: 400px;
+    }
+    
 }
+@media (min-width: 850px) {
+    .NavBarVertical{
+        display: none;
+    }
+
+} 
 
 
 @media (max-width: 700px) {
     .contenedorImagenCards img{
         width: 115px;
     }
-
+    .componentesDelHome{
+        margin-top: 7%;
+    }
     .tarjetasProducto{
-        height: 230px;
-        width: 190px;
+        height: 250px;
+        width: 210px;
 
+    }
+    .filters{
+        font-size: 1.15rem;
     }
 
 } 
@@ -758,7 +940,9 @@ footer .redesSociales a{
     .contenedorImagenCards img{
         width: 105px;
     }
-
+    .componentesDelHome{
+        margin-top: 10%;
+    }
     .tarjetasProducto{
         height: 220px;
         width: 170px;
@@ -769,28 +953,16 @@ footer .redesSociales a{
         align-items: center;
         width: 125px;
         height: 125px;
+    }
+    .contendedorFormulario{
+        width: 350px;
+    }
+    .formulario input{
+        min-width: 100px;
     }
 
 }
 
-/* @media (max-width: 580px) {
-    .contenedorImagenCards img{
-        width: 105px;
-    }
-
-    .tarjetasProducto{
-        height: 220px;
-        width: 170px;
-
-    }
-    .tarjetasProducto .contenedorImagenCards{
-        justify-content: center;
-        align-items: center;
-        width: 125px;
-        height: 125px;
-    }
-
-} */
 
 
 

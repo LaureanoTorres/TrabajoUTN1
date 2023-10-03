@@ -2,6 +2,9 @@ import React from 'react'
 
 const Contact = () => {
   return (
+
+
+    <div className='contenedorDeContenedorFormulario'>
     <div className='contendedorFormulario'>
     <div className='formulario'>
 
@@ -33,7 +36,7 @@ const Contact = () => {
 
     </div>
     </div>
-    
+    </div>
   )
 }
 
