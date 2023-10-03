@@ -386,13 +386,11 @@
     flex-direction: row;
     gap: 5px;
     padding: 1% 0%;
-/*     width:75%;
- */}
+}
 .separadorHome{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-   /*  height: 40px; */
     gap: 5px;
     color:  var(--color-primario);
     font-size: 1.2rem;
@@ -430,15 +428,12 @@
     font-size: 1.8em;
 }
 
-
 .contenedorFiltros{
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-
-
 
 .filters{
     height: auto;
@@ -456,12 +451,11 @@
     width: 95%;
 }
 
-
 .filters input:hover{
     cursor: pointer;
 }
 
-/* ---------------------------------- */
+/* ---------------Tarjetas------------------- */
 
 .padreTarjetas{
     display: flex;
@@ -471,9 +465,7 @@
     align-content: start;
     gap: 20px;
     width: 75%;
-
 }
-
 
 .tarjetasProducto{
     display: flex;
@@ -519,9 +511,11 @@
     text-decoration: none;
     color: var(--color-primario);
 }
+
 /* -----------detaill Productos--------- */
 .descripcionProducto{
     white-space: pre-wrap;
+    padding-bottom: 3%;
 }
 .contenedorProductDetail{
     height: 100%;
@@ -569,7 +563,6 @@
     align-items: center;
     background-color: white;
 }
-
 
 .detailProdImagen{
     border-radius: 3%;
@@ -653,11 +646,7 @@
     box-shadow: 2px 2px 1px 2px lightgray;
     background-color: var(--color-primario);
     color: white;
-
-
 }
-
-
 
 .btnCompraPrevio{
     width: 12rem;
@@ -679,9 +668,7 @@
     box-shadow: 2px 2px 1px 2px lightgray;
     background-color: var(--color-primario);
     color: white;
-
 }
-
 
 .divDescripcionProducto{
     display: flex;
@@ -698,7 +685,6 @@ footer{
     font-size: 0.8rem;
 }
 
-
 footer .container{
     display: flex;
     flex-direction: row;
@@ -712,16 +698,15 @@ footer .container{
 
 footer .linksFooter{
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column;    
 }
+
 footer .linksFooter ul{
 list-style-type: none;
 }
 footer .linksFooter ul a{
     text-decoration: none;
-    
-    
+
 }
 .linksFooter a{
     color: var(--color-primario);
@@ -763,14 +748,13 @@ footer .redesSociales a{
 .claseHide{
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.475s ease; /* visibility 0s 0.375s; */
+    transition: opacity 0.475s ease; 
 }
 .claseShow{
     opacity: 1;
     visibility: visible;
-    transition: opacity 0.475s ease; /* visibility 0s; */
+    transition: opacity 0.475s ease; 
 }
-
 
 
 /* ----------Medias Querys------------ */
@@ -892,7 +876,6 @@ footer .redesSociales a{
     }
     .contenedorImagenCards img{
         width: 125px;
-     /*    height: 125px; */
     }
     .tarjetasProducto{
         height: 260px;
@@ -987,14 +970,13 @@ footer .redesSociales a{
 
 @media (max-width: 510px) {
     html{
-      font-size: 12px; /* Cambio de tamaño de fuente para pantallas más grandes */
+        font-size: 12px;
     }
     #NombreMarca{
         display: none;
     }
     .contenedorImagenCards img{
         width: 110px;
-       /*  height: 110px; */
     }
     .tarjetasProducto{
         height: 250px;
@@ -1007,11 +989,5 @@ footer .redesSociales a{
         width: 110px;
         height: 110px;
     }
-   /*  .barrita{
-        width: 60px;
-    } */
+
 }
-   /*  html{
-        font-size: 14px;
-    }
-} */
