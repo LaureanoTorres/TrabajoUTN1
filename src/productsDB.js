@@ -26,7 +26,7 @@ macOS con un diseño impactante e intuitivo, que funciona a la perfección con t
         coloresDisponibles: ['Negro', 'Dorado', 'Gris'],
         img: "/imagenes/MacBook Air 1.png",
         memoria: 256
-    },
+    }/* ,
     {
         id:2,
         categoria: 'Laptops',
@@ -444,6 +444,6 @@ Contenido de la caja:
         coloresDisponibles: ['Negro', 'Grafito', 'Blanco'],
         img: "/imagenes/galaxy book 3 pro.webp",
         memoria: 512
-    }
+    } */
 ]
 

@@ -34,7 +34,72 @@ const {ListaProductos,SearchString, handleClaseOculta} = useFilterContext()
 } */
 
 
+
 const Home = () => {
+  const { ListaProductos, SearchString, handleClaseOculta } = useFilterContext();
+  const { pid } = useParams();
+  const [products, setProducts] = useState([]);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    fetch(URL_API + '/api/products', {
+      headers: {
+        'Authorization': localStorage.getItem('auth-token-app')
+      }
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data.status === 401) {
+          navigate('/');
+        }
+        console.log(data);
+        setProducts(data.products);
+      })
+      .catch(error => {
+        console.error('Error fetching products:', error);
+      });
+  }, [navigate]);
+
+  return (
+    <div className='componentesDelHome'>
+      <div className='separadorHome'>
+        <h1 className='tituloPrincipal'>Bienvenido a TechStore</h1>
+        <h3 id='toggleFiltradores' onClick={handleClaseOculta}>
+          Desplegar Filtradores <BiSolidDownArrow className='BiSolidDownArrow' onClick={handleClaseOculta}/>
+        </h3>
+      </div>
+      <div className='productosDelHome'>
+        <br />
+        {products.length === 0 ? (
+          <h2>Cargando...</h2>
+        ) : (
+          <div className='padreTarjetas'>
+            {products
+              .filter(product => product.nombre.toLocaleLowerCase().includes(SearchString.toLocaleLowerCase()))
+              .map(({ categoria, nombre, id, precio, img, memoria, marca, descripcion, coloresDisponibles }) => (
+                <Card
+                  categoria={categoria} nombre={nombre} id={id} precio={precio} img={img} memoria={memoria} marca={marca} descripcion={descripcion} coloresDisponibles={coloresDisponibles} key={id}/>
+              ))
+              }
+          </div>
+        )}
+        <div className='sidebar'>
+          <Filtradores/>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+<div>
+<h1>Lista de productos</h1>
+{products.length === 0 ? <h2>Cargando...</h2> : products.map(product => (
+  <Product key={product.id} {...product}/>
+))}
+</div>
+
+
+/* const Home = () => {
   const {pid} = useParams()
   const [products, setProducts] = useState([])
   const navigate = useNavigate()
@@ -64,7 +129,7 @@ return (
   </div>
 )
 }
-
+ */
 
 export default Home
 
@@ -73,7 +138,7 @@ const Card = ({categoria, nombre, precio, id, img, memoria}) => {
     <div className='tarjetasProducto'>
       
         <div className='contenedorImagenCards'>
-            <img src={img} className='imagenCards'></img>
+          <img src={img} className='imagenCards'></img>
         </div>
         <h2>{nombre}</h2>
         <h3>Categoria: {categoria}</h3>
