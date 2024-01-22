@@ -5,7 +5,7 @@ export const products = [
         nombre: 'MacBook Air M1',
         marca: 'Apple',
         precio: 999,
-        descipcion:
+        descripcion:
 `La notebook más delgada y ligera de Apple viene con los superpoderes del chip M1. Termina todos tus proyectos mucho más rápido con el CPU de 8 núcleos y disfruta como nunca antes de apps y juegos con gráficos avanzados gracias al GPU de hasta 8 núcleos. Además, el Neural Engine de 16 núcleos se encarga de acelerar todos los procesos de aprendizaje automático. Todo en un diseño silencioso sin ventilador que te ofrece la mayor duración de batería en una MacBook Air: hasta 18 horas. (1) Portátil como siempre, más poderosa que nunca.
 Chip M1 de Apple que permite un gran avance en el rendimiento del CPU, GPU y aprendizaje automático.
 Hasta 18 horas de batería para hacer mucho más (1).
@@ -33,7 +33,7 @@ macOS con un diseño impactante e intuitivo, que funciona a la perfección con t
         nombre: 'MacBook Air M2',
         marca: 'Apple',
         precio: 1199,
-        descipcion:  
+        descripcion:  
 `El MacBook Pro de 13 pulgadas es más capaz que nunca. 
 Sobrealimentado por el chip M2 de última generación, es el portátil profesional más portátil de Apple, con hasta 20 horas de duración de la batería.
 
@@ -71,7 +71,7 @@ Todas sus aplicaciones favoritas se ejecutan a la velocidad de la luz, incluidas
         nombre: 'iPhone 15 Plus',
         marca: 'Apple',
         precio: 1099,
-        descipcion: 
+        descripcion: 
 `El iPhone 15 Plus tiene una pantalla de 6.7 pulgadas y una batería que te acompaña todo el día. Su nuevo sistema de dos cámaras te permite tomar fotos espectaculares en condiciones de mucha o poca luz. Y viene con Detección de Choques, una nueva funcionalidad de seguridad que pide ayuda cuando no estás en condiciones de hacerlo.
 (1) La pantalla tiene las esquinas redondeadas. Si se mide en forma de rectángulo, la pantalla tiene 6.68 pulgadas en diagonal. El área real de visualización es menor.
 (2) La duración de la batería varía según el uso y la configuración.
@@ -90,7 +90,7 @@ IEC 60529 (hasta 30 minutos a una profundidad máxima de 6 metros). La resistenc
         nombre: 'Macbook Pro 14"',
         marca: 'Apple',
         precio: 1399,
-        descipcion:
+        descripcion:
 `La nueva MacBook Pro ofrece a los usuarios más pro un rendimiento revolucionario. Elige entre el chip M1 Pro o el aún más potente M1 Max para resolver las tareas profesionales más exigentes con una excepcional duración de la batería(1). Además, la MacBook Pro trae una espectacular pantalla Liquid Retina XDR de 14 pulgadas y puertos avanzados para sacarle más provecho que nunca.
 Chip Apple M1 Pro para alcanzar un nuevo nivel de rendimiento de CPU, GPU y aprendizaje automático.
 CPU de hasta 10 núcleos que ofrece un rendimiento hasta 2 veces más rápido para procesar los flujos de trabajo más exigentes con más velocidad que nunca(3).
@@ -117,7 +117,7 @@ Magic Keyboard retroiluminado con TouchID para desbloquear tu MacBookPro.`,
         nombre: 'Samsung Neo QLED 4K 75"',
         marca: 'Samsung',
         precio: 1999,
-        descipcion:
+        descripcion:
 `Samsung es reconocida a nivel mundial como una empresa líder en la industria tecnológica. Todos sus productos son diseñados con una calidad superior y pensados para contribuir a un futuro mejor. Por eso, va a hacer que disfrutes de una experiencia visual incomparable.
 
 Con el Smart TV NeoQLED 4K vas a acceder a las aplicaciones en las que se encuentran tus contenidos favoritos. Además, podés navegar por Internet, interactuar en redes sociales y divertirte con videojuegos.
@@ -144,7 +144,7 @@ Este modelo está pensado para que puedas despejar tu campo visual. El sector do
         nombre: 'iPhone 15 Pro Max',
         marca: 'Apple',
         precio: 1299,
-        descipcion:
+        descripcion:
 `Phone 15 Pro Max. Forjado en titanio y equipado con el revolucionario chip A17 Pro, un Botón de Acción personalizable y el sistema de cámaras más potente en un iPhone.
 
 FORJADO EN TITANIO — El iPhone 15 Pro Max tiene un diseño resistente y ligero, con titanio de calidad aeroespacial y parte posterior de vidrio mate texturizado. Frente de Ceramic Shield, más duro que el vidrio más duro de cualquier smartphone. Y resistencia a las salpicaduras, al agua y al polvo.
@@ -173,7 +173,7 @@ INNOVACIONES QUE MARCAN LA DIFERENCIA — El iPhone cuenta con tecnologías de p
         nombre: 'Samsung NeoQLED 4K 55"',
         marca: 'Samsung',
         precio: 1699,
-    descipcion:
+    descripcion:
 `Samsung es reconocida a nivel mundial como una empresa líder en la industria tecnológica. Todos sus productos son diseñados con una calidad superior y pensados para contribuir a un futuro mejor. Por eso, va a hacer que disfrutes de una experiencia visual incomparable.
 
 Con el Smart TV NeoQLED 4K vas a acceder a las aplicaciones en las que se encuentran tus contenidos favoritos. Además, podés navegar por Internet, interactuar en redes sociales y divertirte con videojuegos.
@@ -200,7 +200,7 @@ Este modelo está pensado para que puedas despejar tu campo visual. El sector do
         nombre: 'Galaxy Z Flip 5',
         marca: 'Samsung',
         precio: 1099,
-        descipcion:
+        descripcion:
 `Samsung Galaxy Z Flip 5 con 8gb de RAM y 512gb de almacenamiento.
 Doble cámara y más detalles:sus 2 cámaras traseras de 12 Mpx/12 Mpx te permitirán tomar imágenes con más detalles y lograr efectos únicos como el famoso modo retrato de poca profundidad de campo.
 Además, el dispositivo cuenta con cámara frontal de 10 Mpx para que puedas sacarte divertidas selfies o hacer videollamadas.
@@ -223,7 +223,7 @@ Capacidad de almacenamiento ilimitada: olvídate de borrar. Con su memoria inter
         nombre: 'Galaxy Fold 5',
         marca: 'Samsung',
         precio: 1299,
-        descipcion:
+        descripcion:
 `Fotografía profesional en tu bolsillo
 Descubrí infinitas posibilidades para tus fotos con las 3 cámaras principales de tu equipo. Poné a prueba tu creatividad y jugá con la iluminación, diferentes planos y efectos para obtener grandes resultados.
 
@@ -251,7 +251,7 @@ Batería de duración superior
         nombre: 'iPhone 15',
         marca: 'Apple',
         precio: 999,
-        descipcion:
+        descripcion:
 `El iPhone 15 tiene una pantalla de 6.1 pulgadas y una batería que te acompaña todo el día. Su nuevo sistema de dos cámaras te permite tomar fotos espectaculares en condiciones de mucha o poca luz. Y viene con Detección de Choques, una nueva funcionalidad de seguridad que pide ayuda cuando no estás en condiciones de hacerlo.
 (1) La pantalla tiene las esquinas redondeadas. Si se mide en forma de rectángulo, la pantalla tiene 6.68 pulgadas en diagonal. El área real de visualización es menor.
 (2) La duración de la batería varía según el uso y la configuración.
@@ -270,7 +270,7 @@ IEC 60529 (hasta 30 minutos a una profundidad máxima de 6 metros). La resistenc
         nombre: 'Galaxy Book 3',
         marca: 'Samsung',
         precio: 999,
-        descipcion: 
+        descripcion: 
 `La notebook Samsung Premium Galaxy Book3 es una solución tanto para trabajar y estudiar como para entretenerte. Al ser portátil, el escritorio dejará de ser tu único espacio de uso para abrirte las puertas a otros ambientes, ya sea en tu casa o en la oficina.
 
 Pantalla con gran impacto visual
@@ -298,7 +298,7 @@ La batería de este equipo tiene una autonomía de alrededor de 8 horas. La dura
         nombre: 'Galaxy Watch 5',
         marca: 'Samsung',
         precio: 449,
-        descipcion: 
+        descripcion: 
 `Samsung es sinónimo de calidad y evolución tecnológica. Su sistema de navegación intuitivo y la buena integración con otros dispositivos hacen de los relojes inteligentes de esta marca una opción siempre confiable. Además, posee muchas opciones de personalización para que encuentres el estilo que va con vos.
 
 Seguimiento preciso de tu entrenamiento
@@ -325,7 +325,7 @@ La duración de la batería depende del uso que se le dé al producto.`,
         nombre: 'Pixel 7 Pro',
         marca: 'Google',
         precio: 899,
-        descipcion: 
+        descripcion: 
 `Fotografía profesional en tu bolsillo
 Descubrí infinitas posibilidades para tus fotos con las 3 cámaras principales de tu equipo. Poné a prueba tu creatividad y jugá con la iluminación, diferentes planos y efectos para obtener grandes resultados.
 
@@ -364,7 +364,7 @@ modeloExacto:'Google Pixel 7 Pro 256 GB Negro 12 GB RAM',
         nombre: 'Studio Display',
         marca: 'Apple',
         precio: 1449,
-        descipcion: 
+        descripcion: 
 `Presentamos el monitor Studio Display. Una envolvente pantalla Retina 5K de 27 pulgadas (1) con cámara de 12 MP con Encuadre Centrado, micrófonos con calidad de estudio y un sistema de sonido de seis bocinas (parlantes). El compañero ideal de cualquier Mac.
 No todas las configuraciones están disponibles con todos los distribuidores autorizados. Las afirmaciones sobre el rendimiento varían según el modelo y la configuración.
 (1) El tamaño de la pantalla se mide en diagonal.
@@ -386,7 +386,7 @@ Un puerto Thunderbolt 3 y tres puertos USB-C.
         nombre: 'Apple Watch Series 9',
         marca: 'Apple',
         precio: 699,
-        descipcion:
+        descripcion:
 `Apple Watch Series 9 (GPS, 45mm)
 Caja de aluminio color Rosa - Correa deportiva Rosa - Pink
 
@@ -425,7 +425,7 @@ Posee protección IP6X.`,
         nombre: 'Galaxy Book 3 Pro',
         marca: 'Samsung',
         precio: 950,
-        descipcion: 
+        descripcion: 
 `Samsung Galaxy Book3 Pro 14 Intel Core I5 12 Núcleos 16gb Color Graphite te ofrece una experiencia de visualización cinematográfica sin interrupciones gracias a su nítida resolución 3K (2880 x 1800) y los 120 Hz supersuaves. Cada detalle cobra vida en la pantalla de 14 pulgadas. Además, cuenta con una emisión reducida de luz azul para un mayor cuidado de los ojos.
 
 Este dispositivo cuenta con un panel táctil mayor y más puertos integrados, proporcionándote la flexibilidad y versatilidad que necesitas: puertos HDMI, USB-A, microSD e incluso dos puertos Thunderbolt 4 con capacidad ultrarrápida de transferir archivos a 40 Gbps.
