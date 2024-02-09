@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useNavigate, useParams } from 'react-router-dom'
+import { Link, redirect, useNavigate, useParams } from 'react-router-dom'
 import {BiSolidDownArrow} from 'react-icons/bi'
 import { useFilterContext } from '../context/FilterContextProvider'
 import { Filtradores } from '../components'
@@ -40,6 +40,11 @@ const Home = () => {
   const { pid } = useParams();
   const [products, setProducts] = useState([]);
   const navigate = useNavigate();
+  const token = localStorage.getItem('auth-token-app')
+  
+  if(!token){
+    navigate('/login')
+  }
 
   useEffect(() => {
     fetch(URL_API + '/api/products', {
@@ -91,12 +96,12 @@ const Home = () => {
   );
 }
 
-<div>
+/* <div>
 <h1>Lista de productos</h1>
 {products.length === 0 ? <h2>Cargando...</h2> : products.map(product => (
   <Product key={product.id} {...product}/>
 ))}
-</div>
+</div> */
 
 
 /* const Home = () => {

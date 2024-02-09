@@ -37,6 +37,7 @@ verifyToken()
 
     return(
     <div>
+        <div className='contenedorFormularios'></div>
         <div>
             <h1>Login</h1>
         </div>
