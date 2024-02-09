@@ -36,23 +36,26 @@ verifyToken()
     }
 
     return(
-    <div>
-        <div className='contenedorFormularios'></div>
-        <div>
-            <h1>Login</h1>
+    <div className='registerAndLogin'>
+        <div className='contenedorDelcontForm'>
+        <div className='contenedorFormularios'>
+            <div>
+                <h1>Inciar Sesión</h1>
+            </div>
+            <br />
+            <form className='formulariosRegLog' onSubmit={(e)=> handleSubmit(e)}>
+                <label htmlFor="username">Nombre de usuario</label>
+                <input type="text" id='username' name='username' placeholder='Usuario' value={formValues.username} onChange={(e)=>handleChangeInput(e.target.value, e.target.name)}/>
+                {/* <br/> */}
+                <label htmlFor="password">Contraseña</label>
+                <input type="password" id="password" name="password" placeholder='Contraseña' value={formValues.password} onChange={(e)=>handleChangeInput(e.target.value, e.target.name)} />    
+                {/* <br/> */}
+                <input className='btnFormulario' type="submit" value={'Enviar'} />
+            </form>
+            {invalidCredentials && <span>Bad Request</span>}
+            <span>Aun no tienes cuenta?<Link to={'/Register'}>Click aqui</Link></span>
         </div>
-        <form onSubmit={(e)=> handleSubmit(e)}>
-            <label htmlFor="username">Username</label>
-            <input type="text" id='username' name='username' placeholder='Usuario' value={formValues.username} onChange={(e)=>handleChangeInput(e.target.value, e.target.name)}/>
-            <br/>
-            <label htmlFor="password">Contraseña</label>
-            <input type="password" id="password" name="password" placeholder='Contraseña' value={formValues.password} onChange={(e)=>handleChangeInput(e.target.value, e.target.name)} />    
-            <br/>
-            <input type="submit" value={'Enviar'} />
-        </form>
-        {invalidCredentials && <span>Bad Request</span>}
-        <br/>
-        <span>Aun no tienes cuenta?<Link to={'/Register'}>Click aqui</Link></span>
+        </div>
     </div>
     )
 }
