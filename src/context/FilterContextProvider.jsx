@@ -1,5 +1,5 @@
 import React, {useContext, useState, createContext, useEffect} from 'react'
-import { products } from '../productsDB'
+/* import { products } from '../productsDB' */
 
 
 
@@ -12,7 +12,7 @@ const [ProductosSelecionados, setProductosSelecionados] = useState([])
 
 const [SearchString, setSearchString] = useState('')
 
-const [ListaProductos, setListaProductos] = useState(products)
+const [ListaProductos, setListaProductos] = useState([])
 
 const [MarcasSeleccionadas, setMarcasSeleccionadas] = useState([])
 
@@ -28,6 +28,7 @@ const[ClaseOculta, setClaseOculta] = useState(false);
 
 const [MenuHamburgesa, setMenuHamburgesa] = useState(false); 
 
+const [products, setProducts] = useState([]);
 
 
 
@@ -81,7 +82,7 @@ const handleCheckCategoriaSeleccionada = (evento, checked) => {
 
 
 const handleCheckMarcaSeleccionada = (evento, checked) => {
-
+    console.log(MarcasSeleccionadas)
     if(checked){
       setMarcasSeleccionadas([...MarcasSeleccionadas, evento])
     }else{
@@ -113,6 +114,7 @@ const toggleMenuHamburgesa = () => {
       ProductosSelecionados,
       SearchString,
       ListaProductos,
+      setListaProductos,
       handleFilterProducto,
       handleSelectProduct,
       MarcasSeleccionadas,
@@ -128,7 +130,9 @@ const toggleMenuHamburgesa = () => {
       handleClaseOculta,
       ClaseOculta,
       MenuHamburgesa,
-      toggleMenuHamburgesa
+      toggleMenuHamburgesa,
+      products,
+      setProducts
       }}>
       {children}
     </FilterContext.Provider>

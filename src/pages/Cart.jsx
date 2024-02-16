@@ -3,8 +3,9 @@ import { useGlobalContext } from '../context/GlobalContextProvider'
 import { Link } from 'react-router-dom'
 import '../styles/CartStyles.css'
 import { useParams } from 'react-router-dom'
-import { products } from '../productsDB'
+/* import { products } from '../productsDB' */
 import { ProductCartButton } from '../components'
+import { useFilterContext } from '../context/FilterContextProvider'
 
 const Cart = () => {
   const {cart, getTotalCart} = useGlobalContext()
@@ -32,14 +33,12 @@ const Cart = () => {
 export default Cart
 
 const CartItem = ({categoria, nombre, precio, id, quantity, img}) => {
-
+  const { products} = useFilterContext();
   const rute = useParams() 
   const productFound = products.find((product) => product.id === Number(rute.id) )
-  console.log('hola')
   console.log(productFound)
   console.log(products)
   console.log(rute)
-  console.log('asda')
 
   return (
     <div className='tarjetasCarrito' >

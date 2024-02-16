@@ -3,6 +3,7 @@ import { Link, redirect, useNavigate, useParams } from 'react-router-dom'
 import {BiSolidDownArrow} from 'react-icons/bi'
 import { useFilterContext } from '../context/FilterContextProvider'
 import { Filtradores } from '../components'
+import { useGlobalContext } from '../context/GlobalContextProvider'
 import { URL_API } from '../../config'
 
 
@@ -36,12 +37,13 @@ const {ListaProductos,SearchString, handleClaseOculta} = useFilterContext()
 
 
 const Home = () => {
-  const { ListaProductos, SearchString, handleClaseOculta } = useFilterContext();
+  const { SearchString, handleClaseOculta, ClaseOculta, ListaProductos, setListaProductos, setProducts} = useFilterContext();
+  const {setCartProducts} = useGlobalContext();
   const { pid } = useParams();
-  const [products, setProducts] = useState([]);
+ /*  const [products, setProducts] = useState([]); */
   const navigate = useNavigate();
   const token = localStorage.getItem('auth-token-app')
-  
+
   if(!token){
     navigate('/login')
   }
@@ -58,7 +60,9 @@ const Home = () => {
           navigate('/');
         }
         console.log(data);
+        setListaProductos(data.products);
         setProducts(data.products);
+        setCartProducts(data.products)
       })
       .catch(error => {
         console.error('Error fetching products:', error);
@@ -73,13 +77,16 @@ const Home = () => {
           Desplegar Filtradores <BiSolidDownArrow className='BiSolidDownArrow' onClick={handleClaseOculta}/>
         </h3>
       </div>
+      <div /* className='sidebar'  */className={`sidebar ${ClaseOculta ? 'ClaseShow' : 'claseHide'}`} >
+          <Filtradores/>
+        </div>
       <div className='productosDelHome'>
         <br />
-        {products.length === 0 ? (
+        {ListaProductos.length === 0 ? (
           <h2>Cargando...</h2>
         ) : (
           <div className='padreTarjetas'>
-            {products
+            {ListaProductos
               .filter(product => product.nombre.toLocaleLowerCase().includes(SearchString.toLocaleLowerCase()))
               .map(({ categoria, nombre, id, precio, img, memoria, marca, descripcion, coloresDisponibles }) => (
                 <Card
@@ -88,9 +95,7 @@ const Home = () => {
               }
           </div>
         )}
-        <div className='sidebar'>
-          <Filtradores/>
-        </div>
+      
       </div>
     </div>
   );
