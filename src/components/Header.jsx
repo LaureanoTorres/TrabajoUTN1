@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <header>
       <div className='divDelHeader'>
-        <img  id='logoTech' src='/public/imagenes/Logo.png'></img>
+        <img  id='logoTech' src='/imagenes/Logo.png'></img>
         <h2 id='NombreMarca'> TechStore </h2>
         <input placeholder='Buscá tu producto' value={searchString}  onChange={handleFilterProducto} />
         <div className='NavLiksToHide'>
