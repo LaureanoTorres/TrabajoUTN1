@@ -1,5 +1,4 @@
 import React from 'react'
-/* import {BiSolidDownArrow} from 'react-icons/bi' */
 import { useFilterContext } from '../context/FilterContextProvider'
 
 const Filtradores = () => {
@@ -40,13 +39,13 @@ const Filtradores = () => {
         <div className={`filters ${ClaseOculta ? 'claseShow' : 'claseHide'}`}>
             <span>Filtrar Marca: </span>
             <br/>
-            <label htmlFor="">{/* Filtrar por Marca: */} Apple </label>
+            <label htmlFor=""> Apple </label>
             <input type="checkbox" value= {'Apple'} onChange={(e) => handleCheckMarcaSeleccionada(e.target.value, e.target.checked)} checked={MarcasSeleccionadas.includes('Apple')} /> 
             <br/>
-            <label htmlFor="">{/* Filtrar por Marca: */} Samsung </label>
+            <label htmlFor=""> Samsung </label>
             <input type="checkbox" value= {'Samsung'} onChange={(e) => handleCheckMarcaSeleccionada(e.target.value, e.target.checked)}checked={MarcasSeleccionadas.includes('Samsung')}  /> 
             <br/>
-            <label htmlFor="">{/* Filtrar por Marca: */} Google </label>
+            <label htmlFor=""> Google </label>
             <input type="checkbox" value= {'Google'} onChange={(e) => handleCheckMarcaSeleccionada(e.target.value, e.target.checked)} checked={MarcasSeleccionadas.includes('Google')}  />
         </div>
 

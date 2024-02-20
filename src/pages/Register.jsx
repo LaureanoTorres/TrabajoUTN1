@@ -14,7 +14,6 @@ const Register = () => {
     }
     const handleSubmit = async (e) =>{
         e.preventDefault()
-      /*   const response = await axios.post('http://localhost:8080/register', formValues) */
         const response = await fetch(URL_API + '/register', {method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -39,11 +38,8 @@ const Register = () => {
             <form  className='formulariosRegLog' onSubmit={(e) => handleSubmit(e)}>
                 <label htmlFor="username">Nombre de usuario</label>
                 <input type="text" id='username' name='username' placeholder='Usuario' value={formValues.username} onChange={(e) => handleChangeInput(e.target.value, e.target.name)}/>
-                {/* {formValues.username.length == 0 && <span>No puedes dejar este campo vacio</span>} */}
-                {/* <br/> */}
                 <label htmlFor="password">Contraseña</label>
                 <input type="password" id="password" name="password" placeholder='Contraseña' value={formValues.password} onChange={(e) => handleChangeInput(e.target.value, e.target.name)} />    
-                {/* <br/> */}
                 <input className='btnFormulario' type="submit" placeholder='enviar' value={'Enviar'} />
             </form>
             {repeatUsername && <span>El nombre de usuario ya se encuentra en uso</span>}

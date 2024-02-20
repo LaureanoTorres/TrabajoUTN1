@@ -1,5 +1,4 @@
 import React, {useContext, createContext, useState} from 'react'
-/* import { cartProducts } from '../productsDB' */
 
 const GlobalContext = createContext()
 

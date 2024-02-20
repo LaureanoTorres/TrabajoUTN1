@@ -46,10 +46,8 @@ verifyToken()
             <form className='formulariosRegLog' onSubmit={(e)=> handleSubmit(e)}>
                 <label htmlFor="username">Nombre de usuario</label>
                 <input type="text" id='username' name='username' placeholder='Usuario' value={formValues.username} onChange={(e)=>handleChangeInput(e.target.value, e.target.name)}/>
-                {/* <br/> */}
                 <label htmlFor="password">Contraseña</label>
                 <input type="password" id="password" name="password" placeholder='Contraseña' value={formValues.password} onChange={(e)=>handleChangeInput(e.target.value, e.target.name)} />    
-                {/* <br/> */}
                 <input className='btnFormulario' type="submit" value={'Enviar'} />
             </form>
             {invalidCredentials && <span>Bad Request</span>}

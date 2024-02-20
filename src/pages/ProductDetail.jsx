@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-/* import { products } from '../productsDB' */
 import { Error404, ProductCartButton } from '../components'
 import { useGlobalContext } from '../context/GlobalContextProvider'
 import { URL_API } from '../../config'
